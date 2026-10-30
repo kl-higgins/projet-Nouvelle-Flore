@@ -119,8 +119,6 @@ snapshot_vascan <- data.table(
 }
 ```
 
-
-
 ## Nettoyage de la liste de S. Meades (2)
 
 Les deux listes d'entrées (monocotylédones et de dicotylédones) sont réunies, les entrées sans nom sont retirées et les noms sont normalisés. Le processus pour associer les noms verbatims de Meades à la liste complète de noms de VASCAN a été itératif. Les noms sont d'abord validés à l'aide de `gna_verifier()`. La proposition automatique de cet algorithme est utilisée lorsqu'une inspection visuelle démontre qu'elle était adéquate. Toutefois, il a été nécessaire d'appliquer des corrections manuelles pour plusieurs noms.
@@ -211,12 +209,14 @@ if (exists("mead.vascan")) {
 
 La table `ON_AT.table1` réunit les statuts par province et une classe de distribution spécifiquement taillée au besoin du projet `dist`. Elle distingue notamment les taxons présents au Québec, ceux signalés au Labrador ou au Nouveau-Brunswick sans présence au Québec, ceux associés à d'autres provinces et ceux dont la distribution en Ontario reste à préciser.
 
-La valeur de l'attribut `establishmentMeans` a été utilisé en premier pour établir les espèces par provinces. Ainsi, les espèces dont le statut est "irregular" (éphémère) et "present" (présence validée) ont été classées selon leur indigenat (indigène ou introduit). Les espèces dont le statut est "absent" (extirpée) ont été rajouté car ces espèces font partie des listes d'espèces à statut de conservation des provinces. Les espèces dont le statut est "doubtful" ou "excluded" ont été exclues du comptabilisation des taxons.
+La valeur de l'attribut `occurrenceStatus` a été utilisé en premier pour établir les espèces par provinces. Ainsi, les espèces dont le statut est "present" (présence validée), "irregular" (éphémère), "doubtful" (potentiel) et "absent" (extirpé) ont été retenues. Le statut "absent" (extirpée) a été inclus car ces espèces font partie des listes d'espèces à statut de conservation des provinces. Les espèces dont le statut est "doubtful" ont aussi été incluses du comptabilisation des taxons tandis que ceux avec "excluded" (exclues) ne l'ont pas été.
 
 ```{r distribution-vascan-initial, echo=FALSE}
 if (exists("ON_AT.table1")) {
 distribution_VASCAN <- left_join(ON_AT.table1[,list(Taxons=length(taxonID)), by=.(dist)], dist_noms_complets)%>%
-                        select(dist_label, Taxons)%>%
+                        
+                        mutate(dist = factor(dist, levels = levels(ON_AT.table1$dist))) %>%arrange(dist) %>%
+                        select(dist_label, Taxons)%>%                      
                         rename("Distribution"="dist_label")
 
 flextable::flextable(distribution_VASCAN) |>
@@ -245,6 +245,7 @@ knitr::kable(
 
 }
 ```
+
 ```{r nhic-carex-bigelowii-2}
 if (exists("list_ontario_emvs.df.dist")){
 knitr::kable(
@@ -254,6 +255,7 @@ knitr::kable(
 )
 }
 ```
+
 -   Espèce et variété indigène toutes deux mentionnées par le NHIC. Ces exemples suivants permettent d’examiner les cas où l’espèce et une variété indigène sont toutes deux mentionnées dans les données NHIC. Ces cas sont omis de l'analyse de la distribution car l'information est déjà fournie par NHIC au rang taxonomique le plus précis dans VASCAN.
 
 ```{r nhic-espece-et-infra}
@@ -269,20 +271,20 @@ knitr::kable(
 ```
 
 -   Maianthemum canadense subsp. interius n'est pas présent dans la liste EMVS de l'Ontario. La distribution sur GBIF semble s'arrêter à la frontière du Québec et Flora of North America ne reconnaît pas cette sous-espèce.
--   Taxons classés « ON NIHC parent » : Examen des premiers cas pour lesquels le rapprochement avec VASCAN s'effectue au niveau du taxon parent.
+-   Taxons classés « ON NHIC parent » : Examen des premiers cas pour lesquels le rapprochement avec VASCAN s'effectue au niveau du taxon parent.
 
 ```{r nhic-exemples tableau}
 if (exists("list_ontario_emvs.df.dist")){
 knitr::kable(
-  list_ontario_emvs.df.dist[source == "ON NIHC parent", ] |>
+  list_ontario_emvs.df.dist[source == "ON NHIC parent", ] |>
     select(sELEMENT_T:source)%>%slice(5:10),
-  caption = "Exemples de taxons classés ON NIHC parent"
+  caption = "Exemples de taxons classés ON NHIC parent"
 )
 
 }
 ```
 
--   Exemple exceptionnel de taxon classé « ON NIHC parent », avec un échange entre les niveaux espèce et sous-espèce associé à la synonymie.
+-   Exemple exceptionnel de taxon classé « ON NHIC parent », avec un échange entre les niveaux espèce et sous-espèce associé à la synonymie.
 
 ```{r nhic-juncus-arcticus, echo=FALSE}
 if (exists("list_ontario_emvs.df.dist")){
@@ -299,6 +301,7 @@ knitr::kable(
 ```{r distribution-vascan-NHIC, echo=FALSE}
 if (exists("ON_AT.table2")) {
 distribution_NHIC <- left_join(ON_AT.table2[,list(Taxons=length(taxonID)), by=.(dist)], dist_noms_complets)%>%
+                      mutate(dist = factor(dist, levels = levels(ON_AT.table1$dist))) %>%arrange(dist) %>%
                         select(dist_label, Taxons)%>%
                         rename("Distribution"="dist_label")
 
@@ -339,6 +342,7 @@ knitr::kable(
  
 }
 ```
+
 ```{r meades-parents-ontario-2, echo=FALSE}
 if (exists("parentNames") && exists("all_parents")) {
   parents_unique_Ontario_VASCAN <- left_join(
@@ -357,6 +361,7 @@ if (exists("parentNames") && exists("all_parents")) {
   )
 }
 ```
+
 ### Exemple de la classification des taxons au niveau espèce de Meades
 
 *Grindelia squarrosa* illustre un taxon classé par Meades selon le taxon parent alors qu'il est exclu du fichier NHIC. Le tableau montre sa classification finale après l'intégration de la liste de Meades.
@@ -376,6 +381,7 @@ if (exists("ON_AT.table3")) {
 ```{r distribution-vascan-NHIC-Meades, echo=FALSE}
 if (exists("ON_AT.table3")) {
 distribution_Meades <- left_join(ON_AT.table3[,list(Taxons=length(taxonID)), by=.(dist)], dist_noms_complets)%>%
+                        mutate(dist = factor(dist, levels = levels(ON_AT.table1$dist))) %>%arrange(dist) %>%
                         select(dist_label, Taxons)%>%
                         rename("Distribution"="dist_label")
 

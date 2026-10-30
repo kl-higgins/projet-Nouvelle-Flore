@@ -253,61 +253,58 @@ mead.vascan2[is.na(accScientificName),]
 # ==============================================================================
 
 # 3.1. Passer du format long au format large : une ligne par taxon et une colonne
-# par territoire, avec la méthode d'établissement comme valeur.
-ON_AT.table1 <- dcast(vascan.taxon.dist, taxonID ~ locality, value.var = "establishmentMeans") |>
+# par territoire, avec le statut d'occurrence comme valeur.
+ON_AT.table1 <- dcast(vascan.taxon.dist, taxonID ~ locality, value.var = "occurrenceStatus") |>
   select(taxonID, Labrador, `New Brunswick`, Newfoundland, `Nova Scotia`, Ontario, `Prince Edward Island`, Quebec) |>
   left_join(vascan.taxon.raw |> select(taxonID, taxonRank, scientificNameSimple, genus, family), by = "taxonID")
-
-ON_AT.table1[ON_AT.table1 == ""] <- NA
-
-# Construire une seconde table à partir du statut de présence.
-ON_AT.table1.alt <- dcast(vascan.taxon.dist, taxonID ~ locality, value.var = "occurrenceStatus") |>
-  select(taxonID, Labrador, `New Brunswick`, Newfoundland, `Nova Scotia`, Ontario, `Prince Edward Island`, Quebec) |>
-  left_join(vascan.taxon.raw |> select(taxonID, taxonRank, scientificNameSimple, genus, family), by = "taxonID")
-
-# Repérer les taxons absents du Québec ou sans statut de présence au Québec,
-# mais signalés comme absents dans au moins un territoire voisin.
-ON_AT.table1.extirpated <- ON_AT.table1.alt[Quebec != "present" | is.na(Quebec), ] |>
-  filter(Quebec == "absent" | `New Brunswick` == "absent" | Ontario == "absent" | Labrador == "absent")
-
-nrow(ON_AT.table1.extirpated)#32 lignes
-
-# Ajouter les taxons extirpés : VASCAN indique "absent", tandis que le portail
-# en ligne utilise "extirpated". Ces enregistrements sont réintégrés à la table.
-ON_AT.table1 <- rbind(ON_AT.table1[!taxonID %in% ON_AT.table1.extirpated$taxonID, ], ON_AT.table1.extirpated)
-ON_AT.table1[ON_AT.table1 == ""] <- NA
+ON_AT.table1[is.na(ON_AT.table1)] <- "no-report" # remplacer la valeur nulle avec une valeur spécifique
 
 # 3.2. Créer une classe de distribution spécifique au projet à partir des statuts provinciaux.
-ON_AT.table1$dist <- ON_AT.table1$Quebec
-ON_AT.table1[is.na(Quebec), dist := "hors-QC"]
 
-ON_AT.table1[is.na(Quebec) & !is.na(`New Brunswick`), dist := "NB sans QC"]
-ON_AT.table1[is.na(Quebec) & !is.na(Labrador), dist := "LB sans QC"]
+ON_AT.table1$dist <- ON_AT.table1$Quebec
+ON_AT.table1[Quebec%in%c("no-report", "excluded"), dist := "hors-QC"]
+
+ON_AT.table1[Quebec%in%c("no-report", "excluded") & !`New Brunswick`%in%c("no-report", "excluded"), dist := "NB sans QC"]
+ON_AT.table1[Quebec%in%c("no-report", "excluded") & !Labrador%in%c("no-report", "excluded"), dist := "LB sans QC"]
 
 ON_AT.table1[
-  is.na(Quebec) & is.na(`New Brunswick`) & is.na(Labrador) &
-    (!is.na(`Nova Scotia`) | !is.na(`Prince Edward Island`)),
+  Quebec %in% c("no-report", "excluded") & `New Brunswick` %in% c("no-report", "excluded") & Labrador %in% c("no-report", "excluded") &
+    (!(`Nova Scotia` %in% c("no-report", "excluded")) | !(`Prince Edward Island` %in% c("no-report", "excluded"))),
   dist := "NE et IPE sans QC/LB/NB"
 ]
 
 ON_AT.table1[
-  is.na(Quebec) & is.na(`New Brunswick`) & is.na(Labrador) &
-    is.na(`Nova Scotia`) & is.na(`Prince Edward Island`) & !is.na(Newfoundland),
+  Quebec%in%c("no-report", "excluded")& `New Brunswick`%in%c("no-report", "excluded") & Labrador%in%c("no-report", "excluded") &
+    `Nova Scotia`%in%c("no-report", "excluded") & `Prince Edward Island`%in%c("no-report", "excluded") & !Newfoundland%in%c("no-report", "excluded"),
   dist := "TN sans QC/LB/NE/IPE/NB"
 ]
 
 ON_AT.table1[
-  is.na(Quebec) & is.na(`New Brunswick`) & is.na(Labrador) & !is.na(Ontario),
+  Quebec%in%c("no-report", "excluded")& `New Brunswick`%in%c("no-report", "excluded") & Labrador%in%c("no-report", "excluded") &
+    !Ontario%in%c("no-report", "excluded"),
   dist := "ON sans QC/LB/NB"
 ]
 
 ON_AT.table1[
-  is.na(Quebec) & is.na(Labrador) & is.na(`New Brunswick`) &
-    is.na(`Nova Scotia`) & is.na(`Prince Edward Island`) & is.na(Newfoundland) & is.na(Ontario),
-  dist := "excluded tous ou absent NE/IPE/TN"
+  Quebec%in%c("no-report", "excluded")& Labrador%in%c("no-report", "excluded") & `New Brunswick`%in%c("no-report", "excluded") &
+    `Nova Scotia`%in%c("no-report", "excluded") & `Prince Edward Island`%in%c("no-report", "excluded") & Newfoundland%in%c("no-report", "excluded") & Ontario%in%c("no-report", "excluded"),
+  dist := "exclu tous"
 ]
+ON_AT.table1[dist=='present', dist:="present-QC"]
+ON_AT.table1[dist=='absent', dist:="extirp-QC"]
+ON_AT.table1[dist=='doubtful', dist:="potentiel-QC"]
+ON_AT.table1[dist=='irregular', dist:="ephemere-QC"]
 
 # 3.3. Examiner les effectifs par classe de distribution.
+table(ON_AT.table1$dist)
+
+ON_AT.table1$dist<-factor(ON_AT.table1$dist,
+                          levels=c("present-QC", "ephemere-QC", "potentiel-QC", "extirp-QC",
+                                   "LB sans QC", "NB sans QC", 
+                                   "ON sans QC/LB/NB", "ON nord EMVS", "ON nord S4 S5", "ON nord absent",
+
+                                   "NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB",
+                                   "exclu tous"))
 table(ON_AT.table1$dist)
 
 provinces_abréviations<-data.table(abréviation=c("QC", "LB", "NB", "NÉ", "IPÉ", "TN", "ON"),
@@ -317,25 +314,26 @@ provinces_abréviations
 
 dist_noms_complets<-data.table(
   dist=c("native", "introduced", "ON nord EMVS", "ON sans QC/LB/NB", 
-  "excluded tous ou absent NE/IPE/TN", "ON nord S4 S5", "NB sans QC", 
+         "present-QC", "ephemere-QC", "potentiel-QC", "extirp-QC",
+  "exclu tous", "ON nord S4 S5", "NB sans QC", 
   "NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", 
-  "LB sans QC", "absent", "ON nord absent"),
+  "LB sans QC", "ON nord absent"),
   
   dist_label=c("Indigène au QC", "Introduit au QC",
                              "Présent seulement en ON, répartition dans le Nord selon NHIC",
                              "Présent seulement en ON, répartition imprécise dans la province",
-                              
-                             "Exclu de toutes les provinces ou absent de la NÉ, de ÎPE et de TN",
+                              "Présent au QC", "Présence ephémère au QC", "Présence potentielle au QC", "Extirpé du QC",
+                             "Exclu de toutes les provinces",
                               "Présent seulement en ON, répartition dans le Nord selon Meades",
                               "Présent au NB, absent au QC", "Présent au NE et IPE, absent au QC, LB et NB", "Présent à TN, absent QC,LB,NB,IPE et NE",
-                              "Présent au LB, absent au QC", "Extirpé du QC",
+                              "Présent au LB, absent au QC", 
                               "Présent seulement en ON, absence d'équivalence dans les listes du Nord"))
 dist_noms_complets
 
 # Distinguer les taxons inclus dans le territoire de ceux omis ou à déterminer.
 ON_AT.table1$source <- "autre"
-ON_AT.table1[dist %in% c("introduced", "native", "absent", "LB sans QC", "NB sans QC"), source := "VASCAN inclu"]
-ON_AT.table1[dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "excluded tous ou absent NE/IPE/TN"), source := "VASCAN omis"]
+ON_AT.table1[dist %in% c("present-QC", "ephemere-QC", "potentiel-QC", "extirp-QC", "LB sans QC", "NB sans QC"), source := "VASCAN inclu"]
+ON_AT.table1[dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "exclu tous"), source := "VASCAN omis"]
 
 table(ON_AT.table1$source)
 # "autre" indique les espèces du Nord de l'Ontario (selon VASCAN) pour lesquelles il faut déterminer sud ou nord
@@ -384,8 +382,8 @@ list_ontario_emvs.df.dist <- left_join(
 
 list_ontario_emvs.df.dist$source <- "autre"
 list_ontario_emvs.df.dist[dist == "ON sans QC/LB/NB", source := "ON NHIC taxon"]
-list_ontario_emvs.df.dist[dist %in% c("introduced", "native", "absent", "LB sans QC", "NB sans QC"), source := "VASCAN inclu"]
-list_ontario_emvs.df.dist[dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "excluded tous ou absent NE/IPE/TN"), source := "VASCAN omis"]
+list_ontario_emvs.df.dist[dist %in% c("present-QC", "ephemere-QC", "potentiel-QC", "extirp-QC", "LB sans QC", "NB sans QC"), source := "VASCAN inclu"]
+list_ontario_emvs.df.dist[dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "exclu tous"), source := "VASCAN omis"]
 list_ontario_emvs.df.dist[is.na(dist), source := "ON NHIC parent"]
 
 table(list_ontario_emvs.df.dist$source)
@@ -434,7 +432,7 @@ list_ontario_emvs.df.dist[source == "ON NHIC parent", ] |>
 # en Ontario selon VASCAN, dont le parent est identifié à l'espèce dans la liste EMVS.
 # Les taxons introduits sont exclus de cette recherche.
 ON_parents <- left_join(
-  ON_AT.table2[dist %in% c("ON sans QC/LB/NB", "NE et IPE sans QC/LB/NB", "excluded tous ou absent NE/IPE/TN")
+  ON_AT.table2[dist %in% c("ON sans QC/LB/NB", "NE et IPE sans QC/LB/NB", "exclu tous")
               & taxonRank %in% c("variety", "subspecies") & Ontario != "introduced", ],
   vascan.taxon.raw.can |> select(taxonID, parentNameUsageID, parentNameUsage)
 ) |>
@@ -610,6 +608,18 @@ ON_AT.table3[
     scientificNameSimple %in% ajout_parents[distribution == "absent", ]$scientificNameSimple,
   dist := "ON nord absent"
 ]
+ON_AT.table3[dist == "ON sans QC/LB/NB",]
+table(ON_AT.table3$source)
+
+ON_AT.table3[
+  dist == "ON sans QC/LB/NB",
+  source := "absent des listes NHIC et Meades"
+]
+
+ON_AT.table3[
+  dist == "ON sans QC/LB/NB",
+  dist := "ON nord absent"
+]
 
 table(ON_AT.table3$dist)
 table(ON_AT.table3$source)
@@ -631,18 +641,19 @@ table(ON_AT.table3$source)
 
 ON_AT.table3$territoire <- "autre"
 
-ON_AT.table3[dist %in% c("introduced", "native", "absent", "LB sans QC", "NB sans QC"), territoire := "QC inclu"]
-ON_AT.table3[dist %in% c("LB sans QC", "NB sans QC"), territoire := "ajout LB"]
+ON_AT.table3[dist %in% c("present-QC", "ephemere-QC", "potentiel-QC", "extirp-QC"), territoire := "QC inclu"]
+ON_AT.table3[dist %in% c("LB sans QC"), territoire := "ajout LB"]
 ON_AT.table3[dist %in% c("NB sans QC"), territoire := "ajout NB"]
 
 ON_AT.table3[dist %in% c("ON nord EMVS", "ON nord S4 S5"), territoire := "potentiel ON"]
 
 ON_AT.table3[
-  dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "excluded tous ou absent NE/IPE/TN", "ON sans QC/LB/NB", "ON nord absent"),
+  dist %in% c("NE et IPE sans QC/LB/NB", "TN sans QC/LB/NE/IPE/NB", "exclu tous", "ON sans QC/LB/NB", "ON nord absent"),
   territoire := "omettre"
 ]
-
-ON_AT.table3$territoire<-factor(ON_AT.table3$territoire, levels=c("QC inclu", "ajout LB", "ajout NB", "potentiel ON", "omettre"))
+table(ON_AT.table3$territoire)
+ON_AT.table3$territoire<-factor(ON_AT.table3$territoire,
+                                levels=c("QC inclu", "ajout LB", "ajout NB", "potentiel ON", "omettre"))
 table(ON_AT.table3$territoire)
 
 ON_AT.table3[territoire=='autre',]
@@ -675,7 +686,7 @@ listajouts <- left_join(ON_AT.table.export[territoire != "omettre", ], vascan.ex
 
 candidats_long <- listajouts[, list(nb.taxa = length(taxonID)), by = .(genus, territoire)] |>
   arrange(genus, territoire)
-
+candidats_long
 candidats <- dcast(candidats_long, genus ~ territoire, value.var = "nb.taxa")
 candidats[is.na(candidats)] <- 0
 
@@ -717,6 +728,6 @@ candidats[`potentiel ON` > 5, ]
 
 #rmarkdown::render(
 # "couverture_geographique_projet.Rmd", output_format = "word_document",
-# output_file = paste0("documents et rapports/Couverture_geographique_establishmentMeans_ProjetNouvelleFlore", Sys.Date(), ".docx"),
+# output_file = paste0("documents et rapports/Couverture_geographique_occurrenceStatus_ProjetNouvelleFlore", Sys.Date(), ".docx"),
 # clean = FALSE, quiet = FALSE
 #   )
