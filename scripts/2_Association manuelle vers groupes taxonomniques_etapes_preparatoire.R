@@ -156,6 +156,11 @@ gr_taxo[
   Grand_groupe := "Angiospermes ligneuses"
 ]
 
+gr_taxo[
+  groupe_taxo %in% c("Amelanchier", "Aronia", "Malus", "Physocarpus", "Prunus", "Rosa", "Rubus", "Sorbus", "Spiraea"),
+  Sous_groupe := "Arbres et arbustes feuillus"
+]
+
 # Vérifier l'affectation de Polygonaceae et calculer les effectifs par sous-groupe.
 gr_taxo[Sous_groupe == "Polygonaceae", ]
 
@@ -187,38 +192,34 @@ emvs[, scientificNameSimple := trimws(scientificNameSimple)]
 # Une autre méthode d'extraction des noms avait été envisagée.
 # emvs$scientificNameSimple <- split_string(emvs$`Nom scientifique`)
 
+#ne conserver que les colonnes utiles et enlever les doublons créés par les populations distinctes
+emvs_qc<-emvs |> select(-Groupe, -`Nom scientifique`, -`Nom commun`) |>
+  filter(!duplicated(scientificNameSimple))|>
+  left_join(taxons_tous%>%select(scientificNameSimple, accScientificName))
 # 3.2. Ajouter les statuts EMVS aux taxons du projet.
 # La liste EMVS peut comprendre des taxons absents de l'extraction VASCAN,
 # notamment certains taxons disparus qui n'étaient pas inclus dans le téléchargement.
 taxons_prj <- left_join(
   taxons_prj,
-  emvs |> select(-Groupe, -`Nom scientifique`, -`Nom commun`) |> filter(!duplicated(scientificNameSimple))
-)
+  emvs_qc%>%select(`Statut provincial`, accScientificName))
 
 # Examiner les taxons auxquels un statut provincial a été associé.
 taxons_prj[!is.na(`Statut provincial`), ]
 
-# Identifier les familles représentées dans les données EMVS associées.
+# Repérer les taxons EMVS qui ne figurent pas dans la liste taxonomique du projet.
+emvs_qc[!accScientificName%in% taxons_prj$accScientificName, ]
+
+taxons_prj[scientificNameSimple%like%'Isoetes',]
+
+# Identifier les familles et genres représentées dans les données EMVS associées.
 familles_EMVS <- unique(taxons_prj[scientificNameSimple %in% emvs$`Nom scientifique`, ]$family)
 
 taxons_prj[family %in% familles_EMVS, list(nb = length(taxonID)), by = .(family)]
 
-# Repérer les taxons EMVS qui ne figurent pas dans la liste taxonomique du projet.
-emvs[!`Nom scientifique` %in% taxons_prj$scientificNameSimple, ]
+genres_EMVS <- unique(taxons_prj[scientificNameSimple %in% emvs_qc$accScientificName, ]$groupe_taxo)
 
-# Résultat initial : 28 taxons EMVS ne correspondent pas directement aux noms
-# de taxons du projet. Ce nombre doit être recalculé et les cas examinés.
+taxons_prj[groupe_taxo %in% genres_EMVS, list(nb = length(taxonID)), by = .(groupe_taxo)]
 
-# 3.3. Calculer le nombre de taxons EMVS par grand regroupement.
-groupes$nombre_emvs <- 1
-
-for (i in 1:nrow(groupes)) {
-  group_vec <- strsplit(groupes$R_code[i], ",")[[1]] |> trimws()
-  nb_emvs <- nrow(taxons_prj[family %in% group_vec & scientificNameSimple %in% emvs$`Nom scientifique`, ])
-  groupes[i, ]$nombre_emvs <- nb_emvs
-}
-
-groupes[1:4, ]
 
 
 # ==============================================================================
@@ -256,7 +257,7 @@ gr_taxo_final <- left_join(
   arrange(groupe_principal, sous_groupe, order, family, regroupement_cle, genre_section)
 
 names(gr_taxo_final)
-View(gr_taxo_final)
+
 
 # Exportation intermédiaire possible du tableau de sélection.
 # writexl::write_xlsx(

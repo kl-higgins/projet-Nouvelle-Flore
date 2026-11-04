@@ -1,0 +1,481 @@
+---
+title: "Association manuelle des taxons aux groupes taxonomiques"
+subtitle: "Méthodes, annotations et priorisation pour le projet Nouvelle Flore"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+    df_print: paged
+  word_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      comment = "#>", knitr.kable.NA = "")
+library(tidyr)
+library(dplyr)
+library(data.table)
+library(stringr)
+library(knitr)
+```
+
+```{r run-script, include=FALSE}
+# Exécuter le script d'analyse avant de rendre ce document.
+# Les chemins des fichiers d'entrée doivent être accessibles.
+source("scripts/2_Association manuelle vers groupes taxonomniques_etapes_preparatoire.R")
+```
+
+# Objet
+
+Ce document décrit la constitution du tableau de sélection des groupes taxonomiques du projet Nouvelle Flore. Il combine la sélection territoriale issue de VASCAN, les regroupements taxonomiques, les statuts provinciaux du Québec de la liste des espèces floristiques menacées ou vulnérables ou susceptibles d'être ainsi désignées (EMVS), les annotations du groupe de travail (à partir du fichier GoogleSheets) et les informations sur l'état des traitements de la *Flora of North America* (FNA).
+
+Le résultat sert à organiser les taxons en groupes de travail et à documenter leur priorisation.
+
+# Sources et fichiers
+
+Les fichiers sont lus dans les répertoires `input data` et `output data` du projet.
+
+| Source | Fichier utilisé | Utilisation |
+|------------------------|------------------------|------------------------|
+| VASCAN | `taxon_sel_VASCANv37_17_YYYY-MM-DD` | Noms et classification taxonomique |
+| Sélection territoriale | `distribution_taxons_sel_YYYY-MM-DD` | Territoire et distribution retenus (selon calcul du script no. 1 : couverture géographique) |
+| Regroupements taxonomiques | `grands_regroupements_taxonomiques.xlsx`, feuille `groupes_taxo_v20260817` | Correspondance familles / grands groupes / sous-groupes |
+| EMVS du Québec | `FO_Signalement_plantes_EMVS_20260626.xlsm`, feuille `Éléments` | Statuts provinciaux du Québec |
+| Annotations du groupe de travail | `Nouvelle_Flore_groupes_taxo_selection_20261022.xlsx` | Priorisation, propositions, intérêt des rédacteurs et état |
+| Traitements FNA incomplets | `FNA_volumes_incomplete_v20260817.csv` | Repérage des groupes dont le traitement FNA est incomplet |
+
+Le code sélectionne automatiquement le fichier de nomenclature de VASCAN et le fichier de distribution les plus récents trouvés dans `output data`.
+
+```{r date fichiers}
+cat("**Les dates inscrites dans les noms de fichiers sont inscrites dans cette version du document sont:**", taxons_fichiers_date[which.max(taxons_fichiers_date)])
+``` 
+
+# 1. Chargement et préparation des données VASCAN
+
+## Méthode
+
+Le script repère le fichier de nomenclature de VASCAN et le fichier de distribution les plus récents à partir de la date inscrite dans leur nom. Les deux tables sont ensuite associées. Les taxons dont le territoire est `omettre` sont exclus de la table de travail et de toutes les autres étapes de l'analyse.
+
+```{r chargement}
+taxons_fichiers <- list.files("output data", pattern = "^taxon_sel_VASCANv37_17", full.names = TRUE)
+taxons_fichiers_date <- as.Date(str_extract(taxons_fichiers, "\\d{4}-\\d{2}-\\d{2}"))
+taxons_fichier_recent <- taxons_fichiers[which.max(taxons_fichiers_date)]
+taxons_tous <- as.data.table(read.table(taxons_fichier_recent))
+
+distribution_fichiers <- list.files("output data", pattern = "^distribution_taxons_sel", full.names = TRUE)
+distribution_fichiers_date <- as.Date(str_extract(distribution_fichiers, "\\d{4}-\\d{2}-\\d{2}"))
+distribution_fichier_recent <- distribution_fichiers[which.max(distribution_fichiers_date)]
+distribution_sel <- as.data.table(read.table(distribution_fichier_recent))
+
+taxons_prj <- left_join(
+  distribution_sel[territoire != "omettre", ],
+  taxons_tous |> select(-taxonomicStatus)
+)
+```
+
+## Résultats sommaires
+
+Les tableaux suivants indiquent les fichiers retenus, le nombre de lignes et les principales répartitions territoriales. Les aperçus sont volontairement limités aux premières lignes.
+
+```{r resultats-chargement}
+data.frame(
+  table = c("VASCAN nomenclature", "Distribution", "Taxons du projet"),
+  fichier = c(basename(taxons_fichier_recent), basename(distribution_fichier_recent), NA),
+  lignes = c(nrow(taxons_tous), nrow(distribution_sel), nrow(taxons_prj))
+) |> kable(caption = "Fichiers chargés et dimensions des tables")
+
+names(taxons_prj) |>
+                             kable(caption = "Attributs de taxons_prj")
+
+taxons_prj[, .(nombre_taxons = .N), by = territoire][order(-nombre_taxons)] |> kable(caption = "Nombre de taxons par territoire")
+```
+
+**Objet produit — `taxons_prj`.** Table de travail des taxons au niveau plus haut de classification (espèce, variété ou sous-espèce) retenus pour le projet, enrichie de leur distribution géographique et de leur classification taxonomique. Si des taxons infraspécifiques sont reconnus par VASCAN, le taxon espèce n'est pas inclu dans la liste. Par exemple, **Ranunculus flammula var ovalis** et **Ranunculus flammula var. reptans** sont dans la liste mais **Ranunculus flammula** est absent car il est un taxon parent des deux autres.
+
+# 2. Regroupement des taxons par groupe taxonomique
+
+## Définition du groupe taxonomique
+
+### Méthode
+
+Le groupe taxonomique correspond généralement au genre. Pour le genre *Carex*, la section extraite du champ `higherClassification` est utilisée (par exemple, une valeur de type `Carex sect. ...`). Le nombre de taxons dans chaque groupe taxonomique est ensuite comptabilisé. Les taxons du territoire `potentiel ON` sont exclus de ce dénombrement.
+
+```{r groupes-base}
+sections.carex <- taxons_prj |>
+  filter(genus == "Carex") |>
+  mutate(section = str_extract(higherClassification, "Carex sect\\. [^;]+"))
+
+taxons_prj <- left_join(taxons_prj, sections.carex |> select(taxonID, section)) |>
+  mutate(groupe_taxo = if_else(!is.na(section), section, genus))
+
+gr_taxo <- taxons_prj[territoire != "potentiel ON",
+                      list(nb.taxa = length(taxonID)),
+                      by = .(groupe_taxo, family, order)]
+```
+
+### Résultats
+
+```{r resultats-groupes-base}
+data.frame(
+  indicateur = c("Taxons dans taxons_prj", "Groupes taxonomiques", "Groupes de Carex"),
+  nombre = c(nrow(taxons_prj), uniqueN(gr_taxo$groupe_taxo),
+             uniqueN(gr_taxo[grepl("^Carex sect\\.", groupe_taxo), groupe_taxo]))
+) |> kable(caption = "Dimensions de la classification par groupe taxonomique")
+
+gr_taxo %>%
+  filter(family %in% c('Acoraceae', 'Viburnaceae', 'Osmundaceae',
+                       'Ericaceae', 'Liliaceae', 'Cyperaceae',
+                       'Juncaceae', 'Fabaceae')) %>%
+  group_by(family) %>%
+  slice_sample(n = 1) %>%
+  ungroup() %>%
+  arrange(order, family, groupe_taxo) |> 
+  kable(caption = "Aperçu des groupes taxonomiques")
+
+```
+
+## Association aux grands regroupements
+
+### Méthode
+
+Le fichier Excel des grands regroupements est réduit aux champs `Grand_groupe`, `Sous_groupe`, `Familles incluses` et `R_code`. La colonne `R_code`, qui contient les codes de familles séparés par des virgules, est décomposée afin d'obtenir une ligne par famille. Cette table sert ensuite à associer chaque groupe taxonomique à un grand groupe et à un sous-groupe.
+
+```{r regroupements-familles}
+groupes_full <- as.data.table(readxl::read_xlsx(
+  "input data/grands_regroupements_taxonomiques.xlsx",
+  sheet = "groupes_taxo_v20260817"
+))
+groupes_trim <- groupes_full |> select(Grand_groupe, Sous_groupe, `Familles incluses`, R_code)
+
+groupes.par.familles <- groupes_trim |>
+  separate_rows(R_code, sep = ",\\s*") |>
+  rename(family = R_code) |>
+  as.data.table() |>
+  select(-`Familles incluses`)
+```
+
+### Réassignations manuelles des familles
+
+Certaines familles sont réassignées pour s'assurer que chaque groupe taxonomique (au niveau de tous les genres de la famille ou seulement quelques genres) n'ait qu'un seul sous groupe assigné. Les règles explicites du script sont résumées ci-dessous.
+
+| Famille | Sous-groupe attribué | Grand groupe attribué |
+|------------------------|------------------------|------------------------|
+| Apiaceae | Apiaceae sensu lato | Dicotylédones terrestres |
+| Ranunculaceae | Ranunculaceae | Dicotylédones terrestres |
+| Rosaceae | Rosaceae herbacées | Dicotylédones terrestres |
+| Polygonaceae | Polygonaceae | Dicotylédones terrestres |
+| Plantaginaceae | Autres dicotylédones herbacées terrestres | Dicotylédones terrestres |
+| Grossulariaceae | Arbres et arbustes feuillus | Angiospermes ligneuses |
+| Caprifoliaceae | Arbres et arbustes feuillus | Angiospermes ligneuses |
+
+```{r regles-familles}
+groupes.par.familles[family == "Apiaceae", `:=`(Sous_groupe = "Apiaceae sensu lato", Grand_groupe = "Dicotylédones terrestres")]
+groupes.par.familles[family == "Ranunculaceae", `:=`(Sous_groupe = "Ranunculaceae", Grand_groupe = "Dicotylédones terrestres")]
+groupes.par.familles[family == "Rosaceae", `:=`(Sous_groupe = "Rosaceae herbacées", Grand_groupe = "Dicotylédones terrestres")]
+groupes.par.familles[family == "Polygonaceae", `:=`(Sous_groupe = "Polygonaceae", Grand_groupe = "Dicotylédones terrestres")]
+groupes.par.familles[family == "Plantaginaceae", `:=`(Sous_groupe = "Autres dicotylédones herbacées terrestres", Grand_groupe = "Dicotylédones terrestres")]
+groupes.par.familles[family == "Grossulariaceae", `:=`(Sous_groupe = "Arbres et arbustes feuillus", Grand_groupe = "Angiospermes ligneuses")]
+groupes.par.familles[family == "Caprifoliaceae", `:=`(Sous_groupe = "Arbres et arbustes feuillus", Grand_groupe = "Angiospermes ligneuses")]
+groupes.par.familles <- groupes.par.familles |> distinct()
+
+gr_taxo <- left_join(gr_taxo, groupes.par.familles)
+```
+
+### Résultats
+
+```{r resultats-regroupements-familles}
+groupes.par.familles[, .(nombre_familles = uniqueN(family)), by = .(Grand_groupe, Sous_groupe)] |>
+  arrange(Grand_groupe, Sous_groupe) |>
+  kable(caption = "Nombre de familles par grand groupe et sous-groupe")
+
+```
+
+## Affectations provisoires et réassignations de genres
+
+### Méthode
+
+Lorsque le sous-groupe n'est pas défini par la table des familles, trois ordres — Caryophyllales, Ericales et Malpighiales — sont provisoirement associés aux autres dicotylédones herbacées terrestres. Les autres sous-groupes manquants reçoivent la mention « probables - à déterminer ». Les grands groupes manquants sont attribués aux dicotylédones terrestres.
+
+Certains genres sont reassignés manuellement au sein d'une même famille afin de séparer les genres herbacés des genres ligneux («Arbres et arbustes feuillus», « Angiospermes ligneuses »). Notamment : *Crataegus*, *Amelanchier,* *Aronia, Malus, Physocarpus, Prunus, Rosa, Rubus, Sorbus, Spiraea*.
+
+```{r affectations-provisoires}
+gr_taxo[order %in% c("Caryophyllales", "Ericales", "Malpighiales") & is.na(Sous_groupe),
+        Sous_groupe := "Autres dicotylédones herbacées terrestres"]
+gr_taxo[is.na(Sous_groupe), Sous_groupe := "Autres dicotylédones herbacées terrestres probables - à déterminer"]
+gr_taxo[is.na(Grand_groupe), Grand_groupe := "Dicotylédones terrestres"]
+
+gr_taxo[groupe_taxo == "Crataegus", `:=`(Sous_groupe = "Arbres et arbustes feuillus", Grand_groupe = "Angiospermes ligneuses")]
+gr_taxo[groupe_taxo == "Amelanchier", Sous_groupe := "Arbres et arbustes feuillus"]
+gr_taxo[groupe_taxo %in% c("Amelanchier", "Aronia", "Malus", "Physocarpus", "Prunus", "Rosa", "Rubus", "Sorbus", "Spiraea"),
+        Grand_groupe := "Angiospermes ligneuses"]
+
+gr_taxo[
+  groupe_taxo %in% c("Amelanchier", "Aronia", "Malus", "Physocarpus", "Prunus", "Rosa", "Rubus", "Sorbus", "Spiraea"),
+  Sous_groupe := "Arbres et arbustes feuillus"
+]
+```
+
+### Résultats
+
+```{r resultats-affectations}
+gr_taxo[, .(nombre_groupes = uniqueN(groupe_taxo), nombre_taxons = sum(nb.taxa)),
+       by = .(Grand_groupe, Sous_groupe)] |>
+  arrange(Grand_groupe, Sous_groupe) |>
+  kable(caption = "Nombre de groupes et de taxons par regroupement")
+
+gr_taxo[grepl("à déterminer", Sous_groupe)] |>
+  head(15) |>
+  kable(caption = "Exemples de groupes dont l'affectation reste à déterminer")
+
+gr_taxo[groupe_taxo %in% c("Crataegus", "Amelanchier", "Aronia", "Malus", "Physocarpus", "Prunus", "Rosa", "Rubus", "Sorbus", "Spiraea")] |>
+  select(groupe_taxo, family, Sous_groupe, Grand_groupe, nb.taxa) |>
+  arrange(Grand_groupe, Sous_groupe, groupe_taxo) |>
+  kable(caption = "Réassignations manuelles de genres de Rosaceae")
+```
+
+Le nombre de taxons par sous-groupe est calculé en additionnant le nombre de taxons de chaque groupe taxonomique qui s'y trouvent. La table des regroupements est ensuite enrichie avec ces totaux.
+
+```{r totaux-sous-groupes}
+calcul.nb.taxa.sous.groupe <- gr_taxo[,
+  list(nb.taxa.sous.groupe = sum(nb.taxa)),
+  by = .(Sous_groupe)
+]
+groupes <- left_join(groupes_trim, calcul.nb.taxa.sous.groupe)
+
+groupes[!is.na(nb.taxa.sous.groupe)] |>
+  select(Grand_groupe, Sous_groupe, nb.taxa.sous.groupe) |>
+  arrange(Grand_groupe, Sous_groupe) |>
+  kable(caption = "Nombre de taxons par sous-groupe")
+```
+
+**Pour prochaine mise à jour.** Les affectations par ordre sont des valeurs provisoires, et non une validation taxonomique individuelle.
+
+# 3. Intégration des statuts provinciaux du Québec EMVS
+
+## Méthode
+
+La feuille `Éléments` du fichier EMVS est filtrée aux `Embryophytes` (qui correspond aux vasculaires). Le nom scientifique est extrait du champ `Nom scientifique` en conservant la partie précédant la virgule, puis les chaînes des populations spécifiques `-p11`, `-p01`, `-p07`, `-p03` et `-p09` sont retirées. Retirer les doublons de noms scientifiques créés par les populations distinctes.
+
+Les champs EMVS sont associés à `taxons_prj`. Les lignes du fichier EMVS sont d'abord dédoublonnées sur `scientificNameSimple`. Le script examine ensuite les taxons auxquels un statut provincial a été associé, les familles représentées et les noms EMVS qui ne correspondent pas directement à un nom de `taxons_prj`.
+
+```{r emvs}
+emvs <- as.data.table(readxl::read_xlsx(
+  "input data/FO_Signalement_plantes_EMVS_20260626.xlsm",
+  sheet = "Éléments"
+)) |> filter(Groupe == "Embryophytes")
+
+emvs[, scientificNameSimple := trimws(sub(",.*", "", `Nom scientifique`))]
+emvs[, scientificNameSimple := gsub("-p11|-p01|-p07|-p03|-p09", "", scientificNameSimple)]
+emvs[, scientificNameSimple := trimws(scientificNameSimple)]
+emvs_qc<-emvs |> select(-Groupe, -`Nom scientifique`, -`Nom commun`) |>
+  filter(!duplicated(scientificNameSimple))|>
+  left_join(taxons_tous%>%select(scientificNameSimple, accScientificName))
+
+taxons_prj <- left_join(
+  taxons_prj,
+  emvs_qc%>%select(`Statut provincial`, accScientificName))
+
+```
+
+## Résultats sommaires
+
+```{r resultats-emvs}
+data.frame(
+  indicateur = c("Éléments EMVS - Embryophytes", "Taxons du projet avec statut provincial", "Noms EMVS sans correspondance directe"),
+  nombre = c(nrow(emvs_qc), sum(!is.na(taxons_prj$`Statut provincial`)),
+             nrow(emvs_qc[!accScientificName %in% taxons_prj$scientificNameSimple, ]))
+) |> kable(caption = "Bilan de l'association aux données EMVS")
+
+taxons_prj[!is.na(`Statut provincial`)] |>
+  select(scientificNameSimple, family, genus, `Statut provincial`) |>
+  head(10) |>
+  kable(caption = "Aperçu des taxons du projet avec un statut provincial")
+
+emvs_qc[!accScientificName%in% taxons_prj$accScientificName, ] |>
+  kable(caption = "Exemples de noms EMVS sans correspondance directe")
+```
+
+# 4. Intégration des annotations et priorisation des groupes
+
+## Méthode
+
+Le fichier d'annotations du groupe de travail est importé depuis `input data`. Lorsqu'un genre possède plusieurs lignes, le script place en premier les lignes où `Priorisation` est renseignée, puis conserve la première ligne par genre. Les annotations sont jointes à `gr_taxo` et les champs sont renommés pour distinguer le grand groupe, le sous-groupe, le regroupement pour la clé, le genre ou la section, la proposition du responsable et l'intérêt du rédacteur.
+
+```{r annotations}
+annotations <- as.data.table(readxl::read_xlsx(
+  "input data/Nouvelle_Flore_groupes_taxo_selection_20261022.xlsx",
+  sheet = "Sheet1"
+))
+
+gr_taxo_final <- left_join(
+  gr_taxo,
+  annotations |>
+    select(genus, groupe.taxonomique, Priorisation, Proposition_Bioinformatique:`état`) |>
+    arrange(is.na(Priorisation)) |>
+    filter(!duplicated(genus)),
+  by = c("groupe_taxo" = "genus")
+) |>
+  rename(
+    groupe_principal = Grand_groupe,
+    sous_groupe = Sous_groupe,
+    regroupement_cle = groupe.taxonomique,
+    genre_section = groupe_taxo,
+    Proposition_Responsable = Proposition_Bioinformatique,
+    Interet_Redacteur = Proposition_Redacteur
+  ) |>
+  select(
+    groupe_principal, sous_groupe, order, family, regroupement_cle, genre_section,
+    nb.taxa, Priorisation, Proposition_Responsable, Interet_Redacteur,
+    Approbation_Comite_Date, `état`
+  ) |>
+  mutate(mise_a_jour_date = as.Date(NA)) |>
+  arrange(groupe_principal, sous_groupe, order, family, regroupement_cle, genre_section)
+```
+
+## Résultats sommaires
+
+Le tableau final contient les groupes taxonomiques, leur nombre de taxons et les champs d'annotation disponibles. Les tableaux suivants donnent une vue abrégée des priorisations et des champs de suivi.
+
+```{r resultats-annotations}
+data.frame(
+  indicateur = c("Lignes de gr_taxo", "Lignes de gr_taxo_final", "Groupes avec priorisation", "Groupes sans priorisation"),
+  nombre = c(nrow(gr_taxo), nrow(gr_taxo_final),
+             sum(!is.na(gr_taxo_final$Priorisation)),
+             sum(is.na(gr_taxo_final$Priorisation)))
+) |> kable(caption = "Bilan de l'intégration des annotations")
+
+gr_taxo_final[, .(nombre_groupes = .N, nombre_taxons = sum(nb.taxa, na.rm = TRUE)),
+              by = Priorisation][order(Priorisation)] |>
+  kable(caption = "Nombre de groupes et de taxons par priorisation")
+
+gr_taxo_final |>
+  select(groupe_principal, sous_groupe, family, genre_section, nb.taxa,
+         Priorisation, Proposition_Responsable, Interet_Redacteur,
+         Approbation_Comite_Date, `état`) |>
+  head(25) |>
+  kable(caption = "Aperçu du tableau annoté")
+```
+
+Le script prévoit une exportation intermédiaire facultative de `gr_taxo_final`, mais les annotations manuelles sont réalisées dans le fichier Excel. Le traitement FNA de l'étape suivante repart donc d'un fichier Excel annoté exporté antérieurement.
+
+# 5. Intégration des informations sur les volumes de la Flora of North America
+
+## Méthode
+
+Le fichier Excel annoté est rechargé, puis associé à la liste CSV des traitements FNA incomplets à partir du site web **floranorthamerica.org**. La correspondance utilise `genre_section` dans le tableau de sélection et `Family.Genus` dans le fichier FNA.
+
+Pour les groupes signalés comme incomplets dans FNA :
+
+-   une priorisation manquante ou égale à `phase 1` devient `attente FNA`;
+-   `Complexe` devient `attente FNA + Complexe`;
+-   `Complexe: révision de spécimens nécessaire` reçoit le préfixe `attente FNA +`.
+
+Les colonnes techniques du fichier FNA (`Author.Email`, `Status`, `X`, `FNA_statut`) sont retirées.
+
+```{r fna}
+annotations2 <- as.data.table(readxl::read_xlsx(
+  "output data/Nouvelle_Flore_groupes_taxo_selection_2026-10-22.xlsx",
+  sheet = "Sheet1"
+))
+FNA_attente <- as.data.table(read.csv("input data/FNA_volumes_incomplete_v20260817.csv")) |>
+  mutate(FNA_statut = "FNA_incomplet")
+
+annotations_FNA_en_production <- left_join(
+  annotations2,
+  FNA_attente,
+  by = c("genre_section" = "Family.Genus")
+)
+
+annotations_FNA_en_production[
+  FNA_statut == "FNA_incomplet" & (is.na(Priorisation) | Priorisation == "phase 1"),
+  Priorisation := "attente FNA"
+]
+annotations_FNA_en_production[
+  FNA_statut == "FNA_incomplet" & Priorisation == "Complexe",
+  Priorisation := "attente FNA + Complexe"
+]
+annotations_FNA_en_production[
+  FNA_statut == "FNA_incomplet" & Priorisation == "Complexe: révision de spécimens nécessaire",
+  Priorisation := "attente FNA + Complexe: révision de spécimens nécessaire"
+]
+
+annotations_FNA_en_production <- annotations_FNA_en_production |>
+  select(-Author.Email, -Status, -X, -FNA_statut)
+```
+
+## Résultats sommaires
+
+```{r resultats-fna}
+data.frame(
+  indicateur = c("Groupes dans le fichier annoté", "Lignes dans la liste FNA incomplète", "Lignes du tableau après jointure"),
+  nombre = c(nrow(annotations2), nrow(FNA_attente), nrow(annotations_FNA_en_production))
+) |> kable(caption = "Bilan de l'intégration des données FNA")
+
+annotations_FNA_en_production[, .N, by = Priorisation][order(Priorisation)] |>
+  kable(caption = "Nombre de groupes par priorisation après intégration FNA")
+
+annotations_FNA_en_production |>
+  select(genre_section, Priorisation, groupe_principal, sous_groupe) |>
+  head(25) |>
+  kable(caption = "Aperçu du tableau de production enrichi avec FNA")
+```
+
+# 6. Exportation des tableaux de sélection et de distribution
+
+## 6.1. Tableau de sélection enrichi
+
+Le tableau `annotations_FNA_en_production` est exporté en format Excel avec une date ajoutée au nom du fichier.
+
+```{r export-selection}
+fichier_selection <- paste0(
+  "output data/Nouvelle_Flore_groupes_taxo_selection_ajoutFNA_",
+  Sys.Date(), ".xlsx"
+)
+writexl::write_xlsx(annotations_FNA_en_production, path = fichier_selection)
+fichier_selection
+```
+
+**Objet exporté — `annotations_FNA_en_production`.** Tableau de sélection des groupes taxonomiques enrichi des annotations, des priorisations et des informations sur les traitements FNA incomplets.
+
+## 6.2. Tableau combinant distribution, regroupements et priorisation
+
+Le script associe la table de distribution territoriale aux groupes taxonomiques et aux champs de priorisation. Le résultat est exporté en texte tabulé.
+
+```{r export-distribution}
+distribution_sel_annotations <- left_join(
+  distribution_sel,
+  taxons_prj |> select(groupe_taxo, taxonID)
+) |>
+  left_join(
+    annotations_FNA_en_production |>
+      select(genre_section, groupe_principal, sous_groupe, regroupement_cle, Priorisation) |>
+      rename(groupe_taxo = genre_section)
+  )
+
+fichier_distribution <- paste0(
+  "output data/distribution_taxons_regroupements",
+  Sys.Date(), ".txt"
+)
+write.table(distribution_sel_annotations, fichier_distribution)
+fichier_distribution
+```
+
+```{r resultats-export}
+data.frame(
+  table = c("Tableau de sélection", "Distribution avec regroupements"),
+  lignes = c(nrow(annotations_FNA_en_production), nrow(distribution_sel_annotations)),
+  colonnes = c(ncol(annotations_FNA_en_production), ncol(distribution_sel_annotations))
+) |> kable(caption = "Dimensions des deux tables exportées")
+
+head(distribution_sel_annotations) |>
+  kable(caption = "Aperçu de la table de distribution enrichie")
+```
+
+# Conclusion
+
+Le processus produit une table finale : `distribution_sel_annotations`, qui rattache les regroupements et les priorisations à la table de distribution territoriale des taxons.

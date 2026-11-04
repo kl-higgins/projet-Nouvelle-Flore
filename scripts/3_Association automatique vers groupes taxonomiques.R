@@ -82,30 +82,37 @@ emvs[, scientificNameSimple := trimws(scientificNameSimple)]
 # Une autre méthode d'extraction des noms avait été envisagée.
 # emvs$scientificNameSimple <- split_string(emvs$`Nom scientifique`)
 
+#ne conserver que les colonnes utiles et enlever les doublons créés par les populations distinctes
+emvs_qc<-emvs |> select(-Groupe, -`Nom scientifique`, -`Nom commun`) |>
+  filter(!duplicated(scientificNameSimple))|>
+  left_join(taxons_tous%>%select(scientificNameSimple, accScientificName))
 # 3.2. Ajouter les statuts EMVS aux taxons du projet.
 # La liste EMVS peut comprendre des taxons absents de l'extraction VASCAN,
 # notamment certains taxons disparus qui n'étaient pas inclus dans le téléchargement.
 taxons_prj <- left_join(
   taxons_prj,
-  emvs |> select(-Groupe, -`Nom scientifique`, -`Nom commun`) |> filter(!duplicated(scientificNameSimple))
-)
+  emvs_qc%>%select(`Statut provincial`, accScientificName))
 
 # Examiner les taxons auxquels un statut provincial a été associé.
 taxons_prj[!is.na(`Statut provincial`), ]
 
-# Identifier les familles représentées dans les données EMVS associées.
+# Repérer les taxons EMVS qui ne figurent pas dans la liste taxonomique du projet.
+emvs_qc[!accScientificName%in% taxons_prj$accScientificName, ]
+
+taxons_prj[scientificNameSimple%like%'Isoetes',]
+
+# Identifier les familles et genres représentées dans les données EMVS associées.
 familles_EMVS <- unique(taxons_prj[scientificNameSimple %in% emvs$`Nom scientifique`, ]$family)
 
 taxons_prj[family %in% familles_EMVS, list(nb = length(taxonID)), by = .(family)]
 
-# Repérer les taxons EMVS qui ne figurent pas dans la liste taxonomique du projet.
-emvs[!`Nom scientifique` %in% taxons_prj$scientificNameSimple, ]
+genres_EMVS <- unique(taxons_prj[scientificNameSimple %in% emvs_qc$accScientificName, ]$groupe_taxo)
 
-# Résultat initial : 28 taxons EMVS ne correspondent pas directement aux noms
-# de taxons du projet. Ce nombre doit être recalculé et les cas examinés.
+taxons_prj[groupe_taxo %in% genres_EMVS, list(nb = length(taxonID)), by = .(groupe_taxo)]
 
 
-View(taxons_prj)
+
+#View(taxons_prj)
 
 # ==============================================================================
 # 4. Exportation de la sélection des taxons pour un rédacteur####
@@ -113,14 +120,50 @@ View(taxons_prj)
 
 redacteur_family = 'Osmundaceae'
 redacteur_genus = 'Cicuta'
+redacteur_family = 'Araceae'
+redacteur_family = 'Fabaceae'
 
 taxons_prj[family==redacteur_family&territoire!='omettre',]%>%
-          select(taxonID, dist, source, territoire, regroupement_cle, family, genus,
+          select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
                  scientificName,scientificNameSimple, `Statut provincial`)
 
 taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
-  select(taxonID, dist, source, territoire, regroupement_cle, family, genus,
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
          scientificName,scientificNameSimple, `Statut provincial`)
+
+redacteur_genus = 'Eriocaulon'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)
+
+redacteur_genus = 'Fraxinus'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)
+
+redacteur_genus = 'Lysimachia'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)
+
+redacteur_genus = 'Primula'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)
+
+# ==============================================================================
+# 4. Regroupement de genres pour les clés ####
+# ==============================================================================
+
+taxons_prj[genus%in%c('Schoenoplectiella', 'Schoenoplectus'), regroupement_cle:='Schoenoplectus_sensu_lato']
+taxons_prj[genus%in%c('Pyrola', 'Moneses', 'Orthilia'), regroupement_cle:='Pyrola_sensu_lato']
+#créer les regroupements pour la clé
+taxons_prj[genus=='Calystegia'|genus=='Convolvulus', regroupement_cle:='Calystegia_Convolvulus']
+taxons_prj[genus=='Onoclea',] #déjà assigné
+taxons_prj[genus%like%'Osmund',] #déjà assigné
+#créer les regroupements pour la clé
+taxons_prj[genus%in%c('Hypopitys', 'Monotropa'), regroupement_cle:='Monotropa_Hypopitys']
+
 
 
 
