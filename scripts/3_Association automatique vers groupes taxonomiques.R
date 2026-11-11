@@ -30,7 +30,14 @@ distribution_fichiers <- list.files("output data",
 distribution_fichiers_date <- as.Date(stringr::str_extract(distribution_fichiers, "\\d{4}-\\d{2}-\\d{2}"))
 distribution_fichier_recent <- distribution_fichiers[which.max(distribution_fichiers_date)]
 distribution_sel <- as.data.table(read.table(distribution_fichier_recent))
+names(distribution_sel)
 
+attribution_fichiers <- list.files("output data",
+                                    pattern = "^attribution_regroupements_", full.names = TRUE)
+attribution_fichiers_date <- as.Date(stringr::str_extract(attribution_fichiers, "\\d{4}-\\d{2}-\\d{2}"))
+attribution_fichier_recent <- attribution_fichiers[which.max(attribution_fichiers_date)]
+attribution_sel <- as.data.table(read.table(attribution_fichier_recent))
+names(attribution_sel)
 
 # Associer les données taxonomiques à la distribution en excluant les taxons "omettre"
 # dont le territoire est classé "omettre".
@@ -40,8 +47,8 @@ taxons_prj <- left_join(
     select(
       #-bibliographicCitation, -license, -references,-nameAccordingToID, -nameAccordingTo,
       -taxonomicStatus
-    )
-)
+    ))|>
+    left_join(attribution_sel)
 
 # Objet produit : taxons_prj
 # Table des taxons sélectionnés pour le projet, enrichie de leur distribution
@@ -112,10 +119,8 @@ taxons_prj[groupe_taxo %in% genres_EMVS, list(nb = length(taxonID)), by = .(grou
 
 
 
-#View(taxons_prj)
-
 # ==============================================================================
-# 4. Exportation de la sélection des taxons pour un rédacteur####
+# 4. Exportation de la sélection des taxons pour un rédacteur - exemples####
 # ==============================================================================
 
 redacteur_family = 'Osmundaceae'
@@ -150,20 +155,4 @@ redacteur_genus = 'Primula'
 taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
   select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
          scientificName,scientificNameSimple, `Statut provincial`)
-
-# ==============================================================================
-# 4. Regroupement de genres pour les clés ####
-# ==============================================================================
-
-taxons_prj[genus%in%c('Schoenoplectiella', 'Schoenoplectus'), regroupement_cle:='Schoenoplectus_sensu_lato']
-taxons_prj[genus%in%c('Pyrola', 'Moneses', 'Orthilia'), regroupement_cle:='Pyrola_sensu_lato']
-#créer les regroupements pour la clé
-taxons_prj[genus=='Calystegia'|genus=='Convolvulus', regroupement_cle:='Calystegia_Convolvulus']
-taxons_prj[genus=='Onoclea',] #déjà assigné
-taxons_prj[genus%like%'Osmund',] #déjà assigné
-#créer les regroupements pour la clé
-taxons_prj[genus%in%c('Hypopitys', 'Monotropa'), regroupement_cle:='Monotropa_Hypopitys']
-
-
-
 

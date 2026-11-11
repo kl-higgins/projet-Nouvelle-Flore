@@ -1,0 +1,873 @@
+"groupe_taxo" "groupe_principal" "sous_groupe" "regroupement_cle" "Priorisation" "Proposition_Responsable" "Interet_Redacteur" "Approbation_Comite_Date" "état" "mise_a_jour_date"
+"1" "Celastrus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"2" "Euonymus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"3" "Parnassia" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"4" "Cornus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA NA NA NA NA
+"5" "Staphylea" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"6" "Lonicera" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA + Complexe" NA NA NA NA NA
+"7" "Symphoricarpos" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"8" "Triosteum" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"9" "Diervilla" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"10" "Weigela" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"11" "Sambucus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"12" "Viburnum" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"13" "Alnus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"14" "Betula" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA NA NA NA NA
+"15" "Carpinus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"16" "Corylus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"17" "Ostrya" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"18" "Fagus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"19" "Quercus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA NA NA NA NA
+"20" "Carya" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"21" "Juglans" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA "Alexandre Bergeron" NA NA NA
+"22" "Comptonia" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"23" "Morella" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"24" "Myrica" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"25" "Fraxinus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA + Complexe" NA NA NA NA NA
+"26" "Ligustrum" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"27" "Syringa" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "attente FNA" NA NA NA NA NA
+"28" "Populus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA NA NA NA NA
+"29" "Salix" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA NA NA NA NA
+"30" "Cannabis" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"31" "Celtis" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"32" "Humulus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"33" "Elaeagnus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"34" "Hippophae" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"35" "Shepherdia" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"36" "Morus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"37" "Endotropis" "Angiospermes ligneuses" "Arbres et arbustes feuillus" "Rhamnus sensu lato" NA NA "Alexandre Bergeron" NA "en cours" NA
+"38" "Frangula" "Angiospermes ligneuses" "Arbres et arbustes feuillus" "Rhamnus sensu lato" NA NA "Alexandre Bergeron" NA "en cours" NA
+"39" "Rhamnus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" "Rhamnus sensu lato" NA NA "Alexandre Bergeron" NA "en cours" NA
+"40" "Ceanothus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"41" "Amelanchier" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" "Étienne Lacroix-Carignan" NA NA NA NA
+"42" "Crataegus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Attente étude systématique" NA "Marc-Aurèle Vallée et Étienne Léveillé-Bourret" NA "en attente" NA
+"43" "Ulmus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA "Alexandre Bergeron" NA NA NA
+"44" "Rhus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA "Alexandre Bergeron" NA "en cours" NA
+"45" "Toxicodendron" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Complexe" NA "Alexandre Bergeron" NA "en cours" NA
+"46" "Acer" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA "Attente étude systématique" NA "Alexandre Bergeron" NA "en attente" NA
+"47" "Aesculus" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA "Alexandre Bergeron" NA NA NA
+"48" "Ribes" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"49" "Hamamelis" "Angiospermes ligneuses" "Arbres et arbustes feuillus" NA NA NA NA NA NA NA
+"50" "Aronia" "Angiospermes ligneuses" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"51" "Malus" "Angiospermes ligneuses" "Rosaceae herbacées" NA "Complexe: certainement plus d'une espèce" NA NA NA NA NA
+"52" "Physocarpus" "Angiospermes ligneuses" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"53" "Prunus" "Angiospermes ligneuses" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"54" "Rosa" "Angiospermes ligneuses" "Rosaceae herbacées" NA "Complexe" "Simon Joly" NA NA NA NA
+"55" "Rubus" "Angiospermes ligneuses" "Rosaceae herbacées" NA "Complexe" NA NA NA NA NA
+"56" "Sorbus" "Angiospermes ligneuses" "Rosaceae herbacées" NA "Complexe" NA NA NA NA NA
+"57" "Spiraea" "Angiospermes ligneuses" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"58" "Ceratophyllum" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"59" "Pinguicula" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA "attente FNA" NA NA NA NA NA
+"60" "Utricularia" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA "attente FNA + Complexe" NA NA NA NA NA
+"61" "Brasenia" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"62" "Nuphar" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"63" "Nymphaea" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"64" "Myriophyllum" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA "Complexe" NA NA NA NA NA
+"65" "Proserpinaca" "Dicotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"66" "Menyanthes" "Dicotylédones aquatiques" "Émergentes dicots" NA "attente FNA" NA NA NA NA NA
+"67" "Nymphoides" "Dicotylédones aquatiques" "Émergentes dicots" NA "attente FNA" NA NA NA NA NA
+"68" "Chamaenerion" "Dicotylédones aquatiques" "Émergentes dicots" NA NA NA NA NA NA NA
+"69" "Circaea" "Dicotylédones aquatiques" "Émergentes dicots" NA NA NA NA NA NA NA
+"70" "Clarkia" "Dicotylédones aquatiques" "Émergentes dicots" NA NA NA NA NA NA NA
+"71" "Epilobium" "Dicotylédones aquatiques" "Émergentes dicots" NA "Complexe" NA NA NA NA NA
+"72" "Ludwigia" "Dicotylédones aquatiques" "Émergentes dicots" NA NA NA NA NA NA NA
+"73" "Oenothera" "Dicotylédones aquatiques" "Émergentes dicots" NA "Complexe" NA NA NA NA NA
+"74" "Saururus" "Dicotylédones aquatiques" "Émergentes dicots" NA NA NA NA NA NA NA
+"75" "Aegopodium" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"76" "Aethusa" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"77" "Anethum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"78" "Angelica" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"79" "Anthriscus" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"80" "Carum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"81" "Cicuta" "Dicotylédones terrestres" "Apiaceae sensu lato" NA "Complexe" "Thomas Villeneuve" "Thomas Villeneuve" NA NA NA
+"82" "Conioselinum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"83" "Conium" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"84" "Coriandrum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"85" "Cryptotaenia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"86" "Daucus" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"87" "Eryngium" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"88" "Foeniculum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"89" "Heracleum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"90" "Levisticum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"91" "Ligusticum" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"92" "Osmorhiza" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"93" "Pastinaca" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"94" "Pimpinella" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"95" "Sanicula" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"96" "Sium" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"97" "Taenidia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"98" "Torilis" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"99" "Zizia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"100" "Aralia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA "phase 1" "Séléna Bergeron" "Séléna Bergeron" NA "rédaction complétée" 2026-10-22
+"101" "Hydrocotyle" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"102" "Panax" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
+"103" "Achillea" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"104" "Ageratina" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"105" "Agoseris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"106" "Ambrosia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"107" "Anaphalis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"108" "Antennaria" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"109" "Anthemis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"110" "Arctium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"111" "Arnica" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA "Alexandre Bergeron" NA "en cours" NA
+"112" "Arnoseris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"113" "Artemisia" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"114" "Askellia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"115" "Bellis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"116" "Bidens" "Dicotylédones terrestres" "Asteraceae" NA "Attente étude systématique" NA "Mauranne Bourgoin" NA "en attente" NA
+"117" "Calendula" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"118" "Canadanthus" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"119" "Carduus" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"120" "Centaurea" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"121" "Chrysanthemum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"122" "Cicerbita" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"123" "Cichorium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"124" "Cirsium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"125" "Coreopsis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"126" "Cosmos" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"127" "Cota" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"128" "Cotula" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"129" "Crepis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"130" "Cyclachaena" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"131" "Dittrichia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"132" "Doellingeria" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"133" "Dyssodia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"134" "Echinacea" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"135" "Echinops" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"136" "Erechtites" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"137" "Erigeron" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"138" "Eupatorium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"139" "Eurybia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"140" "Euthamia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"141" "Eutrochium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"142" "Gaillardia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"143" "Galinsoga" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"144" "Glebionis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"145" "Gnaphalium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"146" "Helenium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"147" "Helianthus" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"148" "Heliopsis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"149" "Helminthotheca" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"150" "Hieracium" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"151" "Hulteniella" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"152" "Hypochaeris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"153" "Inula" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"154" "Ionactis" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"155" "Jacobaea" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"156" "Lactuca" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"157" "Lapsana" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"158" "Leontodon" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"159" "Leucanthemella" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"160" "Leucanthemum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"161" "Liatris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"162" "Madia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"163" "Matricaria" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"164" "Nabalus" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"165" "Oclemena" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"166" "Omalotheca" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"167" "Onopordum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"168" "Packera" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"169" "Pentanema" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"170" "Petasites" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"171" "Pilosella" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"172" "Pseudognaphalium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"173" "Rudbeckia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"174" "Scorzoneroides" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"175" "Senecio" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"176" "Silphium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"177" "Silybum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"178" "Solidago" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"179" "Sonchus" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"180" "Symphyotrichum" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"181" "Tagetes" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"182" "Tanacetum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"183" "Taraxacum" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA NA NA NA NA
+"184" "Tephroseris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"185" "Tragopogon" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"186" "Tripleurospermum" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"187" "Tussilago" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"188" "Vernonia" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"189" "Xanthium" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
+"190" "Campanula" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA + Complexe" NA NA NA NA NA
+"191" "Lobelia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" "Séléna Bergeron" NA NA "en attente" NA
+"192" "Melanocalyx" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"193" "Palustricodon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"194" "Triodanis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"195" "Anchusa" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"196" "Andersonglossum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"197" "Borago" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"198" "Buglossoides" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"199" "Cynoglossum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"200" "Echium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"201" "Hackelia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"202" "Lappula" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"203" "Lithospermum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"204" "Mertensia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"205" "Myosotis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"206" "Nonea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"207" "Omphalodes" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"208" "Plagiobothrys" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"209" "Pulmonaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"210" "Symphytum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"211" "Hydrophyllum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"212" "Chenopodiastrum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "Chenopodium sensu lato" "Complexe" "Étienne Léveillé-Bourret" NA NA NA NA
+"213" "Chenopodium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "Chenopodium sensu lato" "Complexe" "Étienne Léveillé-Bourret" NA NA NA NA
+"214" "Amaranthus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"215" "Atriplex" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"216" "Axyris" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"217" "Bassia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"218" "Blitum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"219" "Corispermum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"220" "Dysphania" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"221" "Kali" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"222" "Lipandra" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"223" "Oxybasis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"224" "Salicornia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"225" "Suaeda" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"226" "Drosera" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "Drosera" "phase 1" "Iris Duvivier" "Iris Duvivier" NA NA NA
+"227" "Mollugo" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"228" "Claytonia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"229" "Montia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"230" "Mirabilis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"231" "Phytolacca" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"232" "Armeria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"233" "Limonium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"234" "Portulaca" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"235" "Impatiens" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"236" "Collomia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"237" "Phlox" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"238" "Polemonium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"239" "Lysimachia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "Lysimachia" "phase 1" "Séléna Bergeron" "Séléna Bergeron" NA "rédaction complétée" 2026-10-22
+"240" "Androsace" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"241" "Primula" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA "Étienne Léveillé-Bourret" NA NA NA
+"242" "Samolus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"243" "Sarracenia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"244" "Chamaebuxus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"245" "Senega" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"246" "Apocynum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"247" "Asclepias" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"248" "Vinca" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"249" "Vincetoxicum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"250" "Bartonia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"251" "Centaurium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"252" "Comastoma" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"253" "Gentiana" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"254" "Gentianella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"255" "Gentianopsis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"256" "Halenia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"257" "Lomatogonium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"258" "Erodium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"259" "Geranium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"260" "Agalinis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"261" "Aphyllon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"262" "Bartsia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"263" "Castilleja" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"264" "Conopholis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"265" "Epifagus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"266" "Euphrasia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"267" "Melampyrum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"268" "Odontites" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"269" "Pedicularis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"270" "Rhinanthus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"271" "Erythranthe" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"272" "Mimulus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"273" "Phryma" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"274" "Antirrhinum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"275" "Callitriche" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"276" "Chaenorhinum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"277" "Chelone" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"278" "Cymbalaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"279" "Digitalis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"280" "Gratiola" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"281" "Hippuris" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"282" "Leucospora" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"283" "Linaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"284" "Littorella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"285" "Misopates" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"286" "Nuttallanthus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"287" "Penstemon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"288" "Plantago" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"289" "Veronica" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"290" "Limosella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"291" "Scrophularia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"292" "Verbascum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"293" "Verbena" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "attente FNA" NA NA NA NA NA
+"294" "Elatine" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"295" "Acalypha" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"296" "Euphorbia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"297" "Hypericum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA "Étienne Lacroix-Carignan" NA NA NA NA
+"298" "Linum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"299" "Radiola" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"300" "Flueggea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"301" "Podostemum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"302" "Viola" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" "Marc-Aurèle Vallée et Étienne Lacroix-Carignan" "Marc-Aurèle Vallée et Étienne Lacroix-Carignan" NA NA NA
+"303" "Abutilon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"304" "Alcea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"305" "Althaea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"306" "Hibiscus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"307" "Malva" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"308" "Tilia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"309" "Oxalis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA NA NA NA NA
+"310" "Berberis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"311" "Caulophyllum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"312" "Mahonia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"313" "Podophyllum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"314" "Adlumia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"315" "Capnoides" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"316" "Chelidonium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"317" "Corydalis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"318" "Dicentra" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"319" "Fumaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"320" "Macleaya" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"321" "Oreomecon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"322" "Papaver" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"323" "Sanguinaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"324" "Boehmeria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "urticaceae" NA NA NA NA NA NA
+"325" "Laportea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "urticaceae" NA NA NA NA NA NA
+"326" "Parietaria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "urticaceae" NA NA NA NA NA NA
+"327" "Pilea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "urticaceae" NA NA NA NA NA NA
+"328" "Urtica" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" "urticaceae" NA NA NA NA NA NA
+"329" "Crassula" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"330" "Hylotelephium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"331" "Phedimus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"332" "Rhodiola" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"333" "Sedum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"334" "Penthorum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"335" "Chrysosplenium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"336" "Micranthes" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"337" "Mitella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"338" "Saxifraga" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"339" "Tiarella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"340" "Calystegia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"341" "Convolvulus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"342" "Cuscuta" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"343" "Ipomoea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"344" "Alkekengi" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"345" "Datura" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"346" "Hyoscyamus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"347" "Leucophysalis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"348" "Lycium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"349" "Nicandra" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"350" "Nicotiana" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"351" "Physalis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"352" "Solanum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"353" "Triglochin" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"354" "Scheuchzeria" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"355" "Zostera" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"356" "Ilex" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"357" "Commelina" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"358" "Hydrangea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"359" "Philadelphus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"360" "Echinocystis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"361" "Sicyos" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"362" "Thladiantha" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"363" "Dipsacus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"364" "Knautia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"365" "Succisella" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"366" "Linnaea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"367" "Valeriana" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"368" "Crepidomanes" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"369" "Justicia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA "attente FNA" NA NA NA NA NA
+"370" "Lindernia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"371" "Crocanthemum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"372" "Hudsonia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"373" "Lechea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"374" "Daphne" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"375" "Dirca" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"376" "Thymelaea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"377" "Decodon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"378" "Lythrum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"379" "Trapa" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"380" "Aristolochia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"381" "Asarum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"382" "Eriocaulon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"383" "Xyris" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"384" "Homalosorus" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"385" "Platanus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"386" "Menispermum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"387" "Comandra" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"388" "Geocaulon" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"389" "Arceuthobium" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"390" "Phellodendron" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"391" "Ptelea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"392" "Ruta" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"393" "Zanthoxylum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"394" "Ailanthus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"395" "Neoschizaea" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"396" "Parthenocissus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"397" "Vitis" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres probables - à déterminer" NA NA NA NA NA NA NA
+"398" "Alliaria" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"399" "Alyssum" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"400" "Arabidopsis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"401" "Arabis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"402" "Armoracia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"403" "Aurinia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"404" "Barbarea" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"405" "Berteroa" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"406" "Boechera" "Dicotylédones terrestres" "Brassicales" NA "Complexe" NA NA NA NA NA
+"407" "Borodinia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"408" "Brassica" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"409" "Braya" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"410" "Bunias" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"411" "Cakile" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"412" "Camelina" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"413" "Capsella" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"414" "Cardamine" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"415" "Cochlearia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"416" "Conringia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"417" "Descurainia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"418" "Diplotaxis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"419" "Draba" "Dicotylédones terrestres" "Brassicales" NA "Complexe" NA NA NA NA NA
+"420" "Eruca" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"421" "Erucastrum" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"422" "Erysimum" "Dicotylédones terrestres" "Brassicales" NA "Complexe" NA NA NA NA NA
+"423" "Eutrema" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"424" "Hesperis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"425" "Hornungia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"426" "Iberis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"427" "Isatis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"428" "Lepidium" "Dicotylédones terrestres" "Brassicales" NA "Complexe" NA NA NA NA NA
+"429" "Lobularia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"430" "Lunaria" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"431" "Mutarda" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"432" "Nasturtium" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"433" "Neslia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"434" "Odontarrhena" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"435" "Physaria" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"436" "Raphanus" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"437" "Rapistrum" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"438" "Rorippa" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"439" "Sinapis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"440" "Sisymbrium" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"441" "Subularia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"442" "Thlaspi" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"443" "Turritis" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"444" "Peritoma" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"445" "Polanisia" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"446" "Tarenaya" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"447" "Floerkea" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"448" "Reseda" "Dicotylédones terrestres" "Brassicales" NA NA NA NA NA NA NA
+"449" "Agrostemma" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"450" "Arenaria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"451" "Atocion" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"452" "Cerastium" "Dicotylédones terrestres" "Caryophyllaceae" NA "Complexe" NA NA NA NA NA
+"453" "Cherleria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"454" "Dianthus" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"455" "Gypsophila" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"456" "Herniaria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"457" "Honckenya" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"458" "Moehringia" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"459" "Mononeuria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"460" "Myosoton" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"461" "Paronychia" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"462" "Petrorhagia" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"463" "Psammophiliella" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"464" "Sabulina" "Dicotylédones terrestres" "Caryophyllaceae" NA "Complexe" NA NA NA NA NA
+"465" "Sagina" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"466" "Saponaria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"467" "Scleranthus" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"468" "Silene" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"469" "Spergula" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"470" "Spergularia" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"471" "Stellaria" "Dicotylédones terrestres" "Caryophyllaceae" NA "Complexe" NA NA NA NA NA
+"472" "Viscaria" "Dicotylédones terrestres" "Caryophyllaceae" NA NA NA NA NA NA NA
+"473" "Diapensia" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA "Iris Duvivier" NA NA NA NA
+"474" "Moneses" "Dicotylédones terrestres" "Ericaceae sensu lato" "Pyrola sensu lato" NA NA NA NA NA NA
+"475" "Orthilia" "Dicotylédones terrestres" "Ericaceae sensu lato" "Pyrola sensu lato" NA NA NA NA NA NA
+"476" "Pyrola" "Dicotylédones terrestres" "Ericaceae sensu lato" "Pyrola sensu lato" NA NA NA NA NA NA
+"477" "Andromeda" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"478" "Arctostaphylos" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"479" "Arctous" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"480" "Calluna" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"481" "Cassiope" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"482" "Chamaedaphne" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"483" "Chimaphila" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"484" "Corema" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"485" "Empetrum" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"486" "Epigaea" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"487" "Gaultheria" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"488" "Gaylussacia" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA "Iris Duvivier" "Iris Duvivier" NA NA NA
+"489" "Harrimanella" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"490" "Hypopitys" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"491" "Kalmia" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA "Iris Duvivier" "Iris Duvivier" NA NA NA
+"492" "Monotropa" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"493" "Phyllodoce" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"494" "Pterospora" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA NA NA NA NA NA
+"495" "Rhododendron" "Dicotylédones terrestres" "Ericaceae sensu lato" NA NA "Iris Duvivier" "Iris Duvivier" NA NA NA
+"496" "Vaccinium" "Dicotylédones terrestres" "Ericaceae sensu lato" NA "Complexe" NA NA NA NA NA
+"497" "Amorpha" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"498" "Amphicarpaea" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"499" "Anthyllis" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"500" "Apios" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"501" "Astragalus" "Dicotylédones terrestres" "Fabaceae" NA "Complexe" "Anne Bruneau" NA NA NA NA
+"502" "Caragana" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"503" "Desmodium" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"504" "Galega" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"505" "Genista" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"506" "Glycine" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"507" "Hedysarum" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"508" "Hylodesmum" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"509" "Lathyrus" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"510" "Lespedeza" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"511" "Lotus" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"512" "Lupinus" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"513" "Medicago" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"514" "Melilotus" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"515" "Onobrychis" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"516" "Oxytropis" "Dicotylédones terrestres" "Fabaceae" NA "Complexe" "Anne Bruneau" NA NA NA NA
+"517" "Pisum" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"518" "Robinia" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"519" "Securigera" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"520" "Strophostyles" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"521" "Thermopsis" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"522" "Trifolium" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"523" "Vicia" "Dicotylédones terrestres" "Fabaceae" NA NA NA NA NA NA NA
+"524" "Agastache" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"525" "Ajuga" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"526" "Blephilia" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"527" "Clinopodium" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"528" "Dracocephalum" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"529" "Elsholtzia" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"530" "Galeopsis" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"531" "Glechoma" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"532" "Hedeoma" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"533" "Lamium" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"534" "Leonurus" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"535" "Lycopus" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA + Complexe: révision de spécimens nécessaire" "Simon Pesant" NA NA NA NA
+"536" "Marrubium" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"537" "Melissa" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"538" "Mentha" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA + Complexe: révision de spécimens nécessaire" NA NA NA NA NA
+"539" "Monarda" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"540" "Nepeta" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"541" "Origanum" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"542" "Physostegia" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"543" "Prunella" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA + Complexe: révision de spécimens nécessaire" NA NA NA NA NA
+"544" "Pycnanthemum" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"545" "Salvia" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"546" "Satureja" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"547" "Scutellaria" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" "Mélanie Lapointe" NA NA NA NA
+"548" "Stachys" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" "Mélanie Lapointe" NA NA NA NA
+"549" "Teucrium" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"550" "Thymus" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"551" "Trichostema" "Dicotylédones terrestres" "Lamiaceae" NA "attente FNA" NA NA NA NA NA
+"552" "Bistorta" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"553" "Fagopyrum" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"554" "Fallopia" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"555" "Koenigia" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"556" "Oxyria" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"557" "Parogonum" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"558" "Persicaria" "Dicotylédones terrestres" "Polygonaceae" NA "Complexe" NA NA NA NA NA
+"559" "Polygonum" "Dicotylédones terrestres" "Polygonaceae" NA "Complexe" NA NA NA NA NA
+"560" "Reynoutria" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"561" "Rheum" "Dicotylédones terrestres" "Polygonaceae" NA NA NA NA NA NA NA
+"562" "Rumex" "Dicotylédones terrestres" "Polygonaceae" NA "Complexe" NA NA NA NA NA
+"563" "Anemonastrum" "Dicotylédones terrestres" "Ranunculaceae" "Anemone sensu lato" NA NA NA NA NA NA
+"564" "Anemone" "Dicotylédones terrestres" "Ranunculaceae" "Anemone sensu lato" NA NA NA NA NA NA
+"565" "Aconitum" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"566" "Actaea" "Dicotylédones terrestres" "Ranunculaceae" NA "Complexe" NA NA NA NA NA
+"567" "Aquilegia" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"568" "Caltha" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"569" "Clematis" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"570" "Coptidium" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"571" "Coptis" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"572" "Delphinium" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"573" "Ficaria" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"574" "Halerpestes" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"575" "Hepatica" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"576" "Hydrastis" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"577" "Ranunculus" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"578" "Thalictrum" "Dicotylédones terrestres" "Ranunculaceae" NA "Complexe" NA NA NA NA NA
+"579" "Trollius" "Dicotylédones terrestres" "Ranunculaceae" NA NA NA NA NA NA NA
+"580" "Agrimonia" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"581" "Alchemilla" "Dicotylédones terrestres" "Rosaceae herbacées" NA "Complexe" NA NA NA NA NA
+"582" "Argentina" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"583" "Aruncus" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"584" "Comarum" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"585" "Cotoneaster" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"586" "Dasiphora" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"587" "Dryas" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"588" "Drymocallis" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"589" "Filipendula" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"590" "Fragaria" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"591" "Geum" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"592" "Potentilla" "Dicotylédones terrestres" "Rosaceae herbacées" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"593" "Poterium" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"594" "Sanguisorba" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"595" "Sibbaldia" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"596" "Sorbaria" "Dicotylédones terrestres" "Rosaceae herbacées" NA NA NA NA NA NA NA
+"597" "×Sorbaronia" "Dicotylédones terrestres" "Rosaceae herbacées" NA "Complexe" NA NA NA NA NA
+"598" "Cephalanthus" "Dicotylédones terrestres" "Rubiaceae" NA "attente FNA" "Andrée Thériault" NA NA NA NA
+"599" "Galium" "Dicotylédones terrestres" "Rubiaceae" NA "attente FNA" "Andrée Thériault (attention, genre a été scindé!)" NA NA NA NA
+"600" "Houstonia" "Dicotylédones terrestres" "Rubiaceae" NA "attente FNA" "Andrée Thériault" NA NA NA NA
+"601" "Hydrogalium" "Dicotylédones terrestres" "Rubiaceae" NA NA NA NA NA NA NA
+"602" "Mitchella" "Dicotylédones terrestres" "Rubiaceae" NA "attente FNA" "Andrée Thériault" NA NA NA NA
+"603" "Sherardia" "Dicotylédones terrestres" "Rubiaceae" NA "attente FNA" "Andrée Thériault" NA NA NA NA
+"604" "Trichogalium" "Dicotylédones terrestres" "Rubiaceae" NA NA NA NA NA NA NA
+"605" "Blysmus" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"606" "Bolboschoenus" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"607" "Bulbostylis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"608" "Carex sect. Acrocystis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"609" "Carex sect. Albae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"610" "Carex sect. Ammoglochin" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"611" "Carex sect. Anomalae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"612" "Carex sect. Aulocystis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"613" "Carex sect. Bicolores" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"614" "Carex sect. Capituligerae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"615" "Carex sect. Carex" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"616" "Carex sect. Careyanae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"617" "Carex sect. Ceratocystis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"618" "Carex sect. Chlorostachyae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"619" "Carex sect. Chordorrhizae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"620" "Carex sect. Clandestinae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"621" "Carex sect. Cyperoideae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"622" "Carex sect. Deweyanae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"623" "Carex sect. Dispermae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"624" "Carex sect. Divisae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"625" "Carex sect. Foetidae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"626" "Carex sect. Glareosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"627" "Carex sect. Granulares" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"628" "Carex sect. Griseae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"629" "Carex sect. Heleoglochin" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"630" "Carex sect. Hirtifoliae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"631" "Carex sect. Holarrhenae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"632" "Carex sect. Hymenochlaenae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"633" "Carex sect. Intersectional" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"634" "Carex sect. Kobresia" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"635" "Carex sect. Lamprochlaenae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"636" "Carex sect. Laxiflorae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"637" "Carex sect. Leptocephalae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"638" "Carex sect. Leucoglochin" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"639" "Carex sect. Limosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"640" "Carex sect. Lupulinae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"641" "Carex sect. Mitratae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"642" "Carex sect. Multiflorae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"643" "Carex sect. Nardinae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"644" "Carex sect. Ovales" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"645" "Carex sect. Paludosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"646" "Carex sect. Paniceae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"647" "Carex sect. Phacocystis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"648" "Carex sect. Phaestoglochin" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"649" "Carex sect. Phyllostachyae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"650" "Carex sect. Physoglochin" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"651" "Carex sect. Porocystis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"652" "Carex sect. Racemosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"653" "Carex sect. Rostrales" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"654" "Carex sect. Rupestres" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"655" "Carex sect. Scirpinae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"656" "Carex sect. Squarrosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"657" "Carex sect. Stellulatae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"658" "Carex sect. Stylosae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"659" "Carex sect. Thuringiaca" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"660" "Carex sect. Vesicariae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"661" "Carex sect. Vulpinae" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"662" "Cladium" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"663" "Cyperus" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"664" "Dulichium" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"665" "Eleocharis" "Graminoïdes" "Cyperaceae" NA "Complexe" "Simon Pesant" NA NA NA NA
+"666" "Eriophorum" "Graminoïdes" "Cyperaceae" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"667" "Fimbristylis" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"668" "Rhynchospora" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"669" "Schoenoplectiella" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"670" "Schoenoplectus" "Graminoïdes" "Cyperaceae" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"671" "Scirpus" "Graminoïdes" "Cyperaceae" NA NA NA "Étienne Léveillé-Bourret" NA NA NA
+"672" "Trichophorum" "Graminoïdes" "Cyperaceae" NA NA NA NA NA NA NA
+"673" "Juncus" "Graminoïdes" "Juncaceae" NA "Complexe" NA NA NA NA NA
+"674" "Luzula" "Graminoïdes" "Juncaceae" NA NA NA NA NA NA NA
+"675" "Oreojuncus" "Graminoïdes" "Juncaceae" NA NA NA NA NA NA NA
+"676" "Agropyron" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"677" "Agrostis" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"678" "Alopecurus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"679" "Andropogon" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"680" "Anthoxanthum" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"681" "Arctagrostis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"682" "Arctophila" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"683" "Arctopoa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"684" "Aristida" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"685" "Arrhenatherum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"686" "Avena" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"687" "Avenella" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"688" "Beckmannia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"689" "Brachyelytrum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"690" "Briza" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"691" "Bromus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"692" "Calamagrostis" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"693" "Catabrosa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"694" "Cenchrus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"695" "Cinna" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"696" "Cynosurus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"697" "Dactylis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"698" "Danthonia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"699" "Deschampsia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"700" "Dichanthelium" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"701" "Digitaria" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"702" "Diplachne" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"703" "Distichlis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"704" "Dupontia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"705" "Echinochloa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"706" "Eleusine" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"707" "Elymus" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"708" "Eragrostis" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"709" "Eriochloa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"710" "Festuca" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"711" "Glyceria" "Graminoïdes" "Poaceae" NA NA NA "Étienne Léveillé-Bourret" NA NA NA
+"712" "Graphephorum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"713" "Holcus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"714" "Hordeum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"715" "Koeleria" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"716" "Leersia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"717" "Leymus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"718" "Lolium" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"719" "Melica" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"720" "Milium" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"721" "Miscanthus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"722" "Molinia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"723" "Muhlenbergia" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"724" "Nardus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"725" "Oryzopsis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"726" "Panicum" "Graminoïdes" "Poaceae" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
+"727" "Patis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"728" "Phalaris" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"729" "Phippsia" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"730" "Phleum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"731" "Phragmites" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"732" "Piptatheropsis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"733" "Pleuropogon" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"734" "Poa" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"735" "Polypogon" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"736" "Puccinellia" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"737" "Schizachne" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"738" "Schizachyrium" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"739" "Secale" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"740" "Setaria" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"741" "Sorghastrum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"742" "Sorghum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"743" "Sphenopholis" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"744" "Sporobolus" "Graminoïdes" "Poaceae" NA "Complexe" NA NA NA NA NA
+"745" "Thinopyrum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"746" "Torreyochloa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"747" "Trisetum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"748" "Triticum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"749" "Vahlodea" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"750" "Ventenata" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"751" "Zea" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"752" "Zizania" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"753" "×Duarctopoa" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"754" "×Elyhordeum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"755" "×Elyleymus" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"756" "×Leydeum" "Graminoïdes" "Poaceae" NA NA NA NA NA NA NA
+"757" "Juniperus" "Gymnospermes" "Conifères" NA "Complexe: plusieurs taxons horticoles à ajouter" NA NA NA NA NA
+"758" "Thuja" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"759" "Taxus" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"760" "Abies" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"761" "Larix" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"762" "Picea" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"763" "Pinus" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"764" "Tsuga" "Gymnospermes" "Conifères" NA NA NA NA NA NA NA
+"765" "Elodea" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"766" "Hydrocharis" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"767" "Najas" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA "Étienne Léveillé-Bourret" NA NA NA
+"768" "Stratiotes" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"769" "Vallisneria" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"770" "Potamogeton" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA "Complexe" NA NA NA NA NA
+"771" "Stuckenia" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"772" "Zannichellia" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"773" "Ruppia" "Monocotylédones aquatiques" "Submergées ou flottantes dicots" NA NA NA NA NA NA NA
+"774" "Acorus" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"775" "Alisma" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"776" "Sagittaria" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"777" "Arisaema" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"778" "Calla" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"779" "Lemna" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"780" "Peltandra" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"781" "Spirodela" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"782" "Symplocarpus" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"783" "Wolffia" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"784" "Butomus" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"785" "Heteranthera" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"786" "Pontederia" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"787" "Sparganium" "Monocotylédones aquatiques" "Émergentes monocots" NA "Complexe" NA NA NA NA NA
+"788" "Typha" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
+"789" "Tofieldia" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
+"790" "Triantha" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
+"791" "Allium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"792" "Narcissus" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
+"793" "Asparagus" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"794" "Convallaria" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"795" "Hosta" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"796" "Hyacinthoides" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
+"797" "Maianthemum" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Kellina Higgins" "Kellina Higgins" NA "rédaction complétée" 2026-10-22
+"798" "Ornithogalum" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"799" "Polygonatum" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"800" "Scilla" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"801" "Hemerocallis" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"802" "Iris" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"803" "Sisyrinchium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "Complexe: révision de spécimens nécessaire" NA NA NA NA NA
+"804" "Uvularia" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"805" "Clintonia" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Martine Lapointe et Kellina Higgins" NA NA "rédaction complétée" NA
+"806" "Erythronium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Martine Lapointe" NA NA NA NA
+"807" "Lilium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"808" "Medeola" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"809" "Streptopus" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Kellina Higgins" "Kellina Higgins" NA "en cours" NA
+"810" "Trillidium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" "Trillium et Trillidium" "phase 1" "Martine Lapointe" NA NA NA NA
+"811" "Trillium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" "Trillium et Trillidium" "phase 1" "Martine Lapointe" NA NA NA NA
+"812" "Anticlea" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"813" "Veratrum" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"814" "Smilax" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA NA NA NA NA
+"815" "Aplectrum" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"816" "Arethusa" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"817" "Calopogon" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"818" "Calypso" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"819" "Coeloglossum" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"820" "Corallorhiza" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"821" "Cypripedium" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"822" "Dactylorhiza" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"823" "Epipactis" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"824" "Galearis" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"825" "Goodyera" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"826" "Liparis" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"827" "Malaxis" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"828" "Neottia" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"829" "Platanthera" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" "Frédérick Létourneau et Benoît Dorion" NA NA NA
+"830" "Pogonia" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"831" "Pseudorchis" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"832" "Spiranthes" "Monocotylédones herbacées latifoliés terrrestres" "Orchidaceae" NA "phase 1" "Frédérick Létourneau et Benoît Dorion" NA NA NA NA
+"833" "Botrychium" "Ptéridophytes" "Fougères" NA "Complexe" "Marc-Aurèle Vallée" NA NA NA NA
+"834" "Botrypus" "Ptéridophytes" "Fougères" NA NA "Marc-Aurèle Vallée" NA NA NA NA
+"835" "Ophioglossum" "Ptéridophytes" "Fougères" NA NA "Marc-Aurèle Vallée" NA NA NA NA
+"836" "Sceptridium" "Ptéridophytes" "Fougères" NA NA "Marc-Aurèle Vallée" NA NA NA NA
+"837" "Claytosmunda" "Ptéridophytes" "Fougères" "Osmundaceae" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"838" "Osmunda" "Ptéridophytes" "Fougères" "Osmundaceae" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"839" "Osmundastrum" "Ptéridophytes" "Fougères" "Osmundaceae" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"840" "Asplenium" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"841" "Athyrium" "Ptéridophytes" "Fougères" "Athyrium sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"842" "Pseudathyrium" "Ptéridophytes" "Fougères" "Athyrium sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"843" "Deparia" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"844" "Anchistea" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"845" "Cystopteris" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"846" "Gymnocarpium" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"847" "Pteridium" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"848" "Sitobolium" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"849" "Dryopteris" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"850" "Polystichum" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"851" "Matteuccia" "Ptéridophytes" "Fougères" "Onocleaceae" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"852" "Onoclea" "Ptéridophytes" "Fougères" "Onocleaceae" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"853" "Polypodium" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"854" "Adiantum" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"855" "Aspidotis" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"856" "Cryptogramma" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"857" "Pellaea" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA NA NA
+"858" "Amauropelta" "Ptéridophytes" "Fougères" "Thelypteris sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"859" "Coryphopteris" "Ptéridophytes" "Fougères" "Thelypteris sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"860" "Thelypteris" "Ptéridophytes" "Fougères" "Thelypteris sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"861" "Phegopteris" "Ptéridophytes" "Fougères" NA "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"862" "Physematium" "Ptéridophytes" "Fougères" "Woodsia sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"863" "Woodsia" "Ptéridophytes" "Fougères" "Woodsia sensu lato" "phase 1" "Alexandre Bergeron" "Alexandre Bergeron" NA "en cours" NA
+"864" "Isoetes" "Ptéridophytes" "Lycophytes" NA "Complexe" NA NA NA NA NA
+"865" "Dendrolycopodium" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"866" "Diphasiastrum" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"867" "Huperzia" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"868" "Lycopodiella" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"869" "Lycopodium" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"870" "Spinulum" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"871" "Selaginella" "Ptéridophytes" "Lycophytes" NA NA NA NA NA NA NA
+"872" "Equisetum" "Ptéridophytes" "Prêles" NA NA NA NA NA NA NA

@@ -272,7 +272,7 @@ names(gr_taxo_final)
 # ==============================================================================
 
 # 5.1. Charger le tableau annoté et la liste des traitements FNA incomplets.
-annotations2 <- as.data.table(readxl::read_xlsx("output data/Nouvelle_Flore_groupes_taxo_selection_2026-10-22.xlsx", sheet = "Sheet1"))
+annotations2 <- as.data.table(readxl::read_xlsx("output data/Nouvelle_Flore_groupes_taxo_selection_intermediaire_2026-10-22.xlsx", sheet = "Sheet1"))
 
 FNA_attente <- as.data.table(read.csv("input data/FNA_volumes_incomplete_v20260817.csv")) |>
   mutate(FNA_statut = "FNA_incomplet")
@@ -311,10 +311,10 @@ annotations_FNA_en_production <- annotations_FNA_en_production |>
 # ==============================================================================
 
 # Exporter le tableau final enrichi avec les informations sur les traitements FNA.
-writexl::write_xlsx(
-  annotations_FNA_en_production,
-  path = paste0("output data/Nouvelle_Flore_groupes_taxo_selection_ajoutFNA_", Sys.Date(), ".xlsx")
-)
+#writexl::write_xlsx(
+#  annotations_FNA_en_production,
+#  path = paste0("output data/Nouvelle_Flore_groupes_taxo_selection_ajoutFNA_", Sys.Date(), ".xlsx")
+#)
 
 # Objet exporté : annotations_FNA_en_production
 # Tableau de sélection des groupes taxonomiques enrichi des informations de
@@ -325,12 +325,16 @@ writexl::write_xlsx(
 #    incluant la distribution territoriale, les groupements taxonomiques et la priorisation
 # ==============================================================================
 
-distribution_sel_annotations<-left_join(distribution_sel, taxons_prj%>%select(groupe_taxo, taxonID))%>%
-          left_join(annotations_FNA_en_production%>%
-                      select(genre_section, groupe_principal, sous_groupe, regroupement_cle, Priorisation)%>%
-                      rename("groupe_taxo"="genre_section"))
+distribution_sel_annotations<-left_join(distribution_sel,
+                                        taxons_prj%>%select(groupe_taxo, taxonID))
 write.table(distribution_sel_annotations,
             paste0("output data/distribution_taxons_regroupements", Sys.Date(), ".txt"))
+
+write.table(annotations_FNA_en_production%>%
+                  select(genre_section, groupe_principal, sous_groupe, regroupement_cle, Priorisation,
+                  Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`)%>%
+              rename("groupe_taxo"="genre_section"),
+            paste0("output data/attribution_regroupements_2026-10-22.txt"))
 
 
 # Points à documenter :
