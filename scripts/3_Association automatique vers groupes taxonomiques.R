@@ -156,3 +156,20 @@ taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
   select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
          scientificName,scientificNameSimple, `Statut provincial`)
 
+redacteur_genus = 'Crocanthemum'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)
+
+
+redacteur_family = 'Cistaceae'
+taxons_prj[family==redacteur_family&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`)%>%arrange(genus, territoire)
+
+
+redacteur_genus = 'Cardamine'
+taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
+  select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, Priorisation, family, genus,
+         scientificName,scientificNameSimple, `Statut provincial`, Interet_Redacteur)
+

@@ -41,9 +41,17 @@ vascan.taxon.raw.can[, scientificNameSimple := paste(genus, specificEpithet)]
 vascan.taxon.raw.can[taxonRank == "variety", scientificNameSimple := paste(genus, specificEpithet, "var.", infraspecificEpithet)]
 vascan.taxon.raw.can[taxonRank == "subspecies", scientificNameSimple := paste(genus, specificEpithet, "subsp.", infraspecificEpithet)]
 
+#modification 2026-11-23 pour les variétés de sous-espèces
+
 #manuellement créer pour Symphyotrichum lanceolatum subsp. lanceolatum
-vascan.taxon.raw.can[higherClassification%like%'Symphyotrichum lanceolatum subsp. lanceolatum',
-                     scientificNameSimple :=paste('Symphyotrichum lanceolatum subsp. lanceolatum', "var.", infraspecificEpithet)]
+#vascan.taxon.raw.can[higherClassification%like%'Symphyotrichum lanceolatum subsp. lanceolatum',
+#                     scientificNameSimple :=paste('Symphyotrichum lanceolatum subsp. lanceolatum', "var.", infraspecificEpithet)]
+#erreur: Tanacetum bipinnatum subsp. huronense var. floccosum
+
+vascan.taxon.raw.can[higherClassification%like%'subsp.'&taxonRank=='variety',
+                                          scientificNameSimple:=paste(str_split(higherClassification, ";", simplify = TRUE) |>
+                             apply(1, \(x) tail(x[nzchar(x)], 1)),
+                           "var.", infraspecificEpithet)]
 
 # 1.3. Associer à chaque taxon son nom accepté simplifié.
 acc <- vascan.taxon.raw.can |>
