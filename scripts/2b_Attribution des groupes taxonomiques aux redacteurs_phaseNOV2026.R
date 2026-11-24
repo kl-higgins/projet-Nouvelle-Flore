@@ -5,7 +5,7 @@
 #   2. Regroupement des taxons par groupe taxonomique
 #   3. Intégration des statuts provinciaux EMVS
 #   4. Exportation des taxons par regroupement_cle pour les rédacteurs
-####DÉBUT script#####
+####DÉBUT script particulier#####
 #   A. Importation des proposition de taxons par les rédacteurs - et approbation
 #   B. Exportation de la sélection des taxons pour un rédacteur
 # ====================================================================================
@@ -423,7 +423,7 @@ attribution_sel_temp[groupe_taxo%in%c('Lysimachia', 'Aralia'), `:=`(Interet_Reda
                                                                                       Approbation_Comite_Date=as.Date('2026-10-15'))]
 
 attribution_sel_temp[groupe_taxo%in%c('Panax', 'Allium'), `:=`(Interet_Redacteur='Séléna Bergeron',
-                                                                    état='rédaction complétée',
+                                                                    état='rédaction en cours',
                                                                     Approbation_Comite_Date=as.Date('2026-10-15'),
                                                                     mise_a_jour_date=as.Date('2026-11-09'))]
 
@@ -561,10 +561,57 @@ write.table(attribution_sel_temp%>%
                      Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`),
             paste0("output data/attribution_regroupements_2026-11-11.txt"))
 
+# ==============================================================================
+# D. Ajouts - sélections par rédacteurs (phase mi à fin novembre) ####
+# ==============================================================================
+
+attribution_sel_temp[groupe_taxo%in%c('Shepherdia'),`:=`(Interet_Redacteur='Mélanie Lapointe',
+                                                                              état='approbation - phase 1',
+                                                                              Approbation_Comite_Date=as.Date('2026-11-13'),
+                                                                              mise_a_jour_date=as.Date('2026-11-13'))]
+attribution_sel_temp[groupe_taxo%in%c('Corylus', 'Carya', 'Aronia'),`:=`(Interet_Redacteur='Mélanie Lapointe',
+                                                         état='attente sélection taxons horticoles',
+                                                         Approbation_Comite_Date=as.Date('2026-11-13'),
+                                                         mise_a_jour_date=as.Date('2026-11-13'))]
+
+attribution_sel_temp[groupe_taxo%in%c('Sagittaria', 'Potamogeton', 'Myriophyllum'),`:=`(Interet_Redacteur='Étienne Léveillé-Bourret',
+                                                         mise_a_jour_date=as.Date('2026-11-24'))]
+
+attribution_sel_temp[groupe_taxo%in%c('Senega'),`:=`(Interet_Redacteur='Patrick Gravel',
+                                                         état='approbation - phase 2',
+                                                         Approbation_Comite_Date=as.Date('2026-11-22'),
+                                                         mise_a_jour_date=as.Date('2026-11-22'))]
+
+attribution_sel_temp[groupe_taxo%in%c('Ribes', 'Alisma'),`:=`(Interet_Redacteur='Séléna Bergeron',
+                                                     état='approbation - continuation',
+                                                     Approbation_Comite_Date=as.Date('2026-11-22'),
+                                                     mise_a_jour_date=as.Date('2026-11-22'))]
+attribution_sel_temp[groupe_taxo%in%c('Hydrophyllum'),`:=`(Interet_Redacteur='Séléna Bergeron',
+                                                              état='en attente FNA',
+                                                              Approbation_Comite_Date=as.Date('2026-11-22'),
+                                                              mise_a_jour_date=as.Date('2026-11-22'))]
+
+
+attribution_sel_temp[Interet_Redacteur%like%'Séléna',]
+
+
+write.table(attribution_sel_temp%>%
+              select(groupe_taxo, groupe_principal, sous_groupe, regroupement_cle, Priorisation,
+                     Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`),
+            paste0("output data/attribution_regroupements_2026-11-24.txt"))
+
+
+
+# ==============================================================================
+# 4. Exportation en format convivial pour le publique ####
+# ==============================================================================
+
 #format pour le publique - lecteur convivial
 taxons_export<-taxons_prj%>%select(groupe_taxo, regroupement_cle, scientificNameSimple, scientificName,taxonID, dist, territoire, source, 
-                                 parentNameUsage, higherClassification, class:taxonRank, `état`, mise_a_jour_date)%>%
-                                  arrange(class, order, family, regroupement_cle, groupe_taxo, genus, territoire, scientificNameSimple)
+                                 parentNameUsage, higherClassification, class:taxonRank)%>%#, `état`, mise_a_jour_date
+                                  arrange(class, order, family, regroupement_cle, groupe_taxo, genus, territoire, scientificNameSimple)%>%
+                left_join(attribution_sel_temp%>%select(groupe_taxo, regroupement_cle, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`))
+
 attribution_export<-attribution_sel_temp%>%left_join(gr_taxo%>%select(groupe_taxo, nb.taxa))%>%
   select(groupe_principal, sous_groupe, order, family, regroupement_cle, groupe_taxo, nb.taxa, Priorisation,
          Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`)
