@@ -1,3 +1,14 @@
+# Fichiers principaux à utiliser pour les rédacteurs
+
+Le fichier avec la sélection par rédacteur des groupes taxonomiques. Essentiel à consulter avant de proposer une genre ou section de Carex à traiter. Regarder la version la plus à jour de _Nouvelle_Flore_groupes_taxo_selection_redacteurs__
+- [Sélection des groupes taxonomiques par rédacteur](https://github.com/kl-higgins/projet-Nouvelle-Flore/tree/master/output%20data)
+
+La présentation des normes et standards à suivre pour le projet.
+- [Normes et standards du projet](https://github.com/kl-higgins/projet-Nouvelle-Flore/tree/master/documents%20et%20rapports/presentationspptx)
+
+Le formulaire (gabarit) à utiliser pour l'entrée de données: prendre la version la plus à jour (v017+) : _Formulaire_FVQ_v_
+- [Formulaire de saisie des données](https://github.com/kl-higgins/projet-Nouvelle-Flore/tree/master/documents%20et%20rapports)
+
 # Guide des scripts — Nouvelle Flore du Québec
 
 Ce dossier rassemble les scripts de préparation des données, d’attribution des groupes taxonomiques et de compilation des traitements. Les scripts utilisent des chemins relatifs : ouvrir `ProjetNouvelleFlore.Rproj` ou définir le répertoire de travail à la racine du projet.
