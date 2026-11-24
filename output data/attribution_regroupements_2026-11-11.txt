@@ -100,7 +100,7 @@
 "99" "Zizia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
 "100" "Aralia" "Dicotylédones terrestres" "Apiaceae sensu lato" NA "phase 1" "Séléna Bergeron" "Séléna Bergeron" 2026-10-15 "rédaction complétée" 2026-10-22
 "101" "Hydrocotyle" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA NA NA NA NA
-"102" "Panax" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA "Séléna Bergeron" 2026-10-15 "rédaction complétée" 2026-11-09
+"102" "Panax" "Dicotylédones terrestres" "Apiaceae sensu lato" NA NA NA "Séléna Bergeron" 2026-10-15 "rédaction en cours" 2026-11-09
 "103" "Achillea" "Dicotylédones terrestres" "Asteraceae" NA "Complexe" NA "Étienne Léveillé-Bourret" NA NA NA
 "104" "Ageratina" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
 "105" "Agoseris" "Dicotylédones terrestres" "Asteraceae" NA NA NA NA NA NA NA
@@ -789,7 +789,7 @@
 "788" "Typha" "Monocotylédones aquatiques" "Émergentes monocots" NA NA NA NA NA NA NA
 "789" "Tofieldia" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
 "790" "Triantha" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
-"791" "Allium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA "Séléna Bergeron" 2026-10-15 "rédaction complétée" 2026-11-09
+"791" "Allium" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" NA "Séléna Bergeron" 2026-10-15 "rédaction en cours" 2026-11-09
 "792" "Narcissus" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA NA NA NA NA NA NA
 "793" "Asparagus" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Martine Lapointe et Julie Boudreau" NA NA NA 2026-11-11
 "794" "Convallaria" "Monocotylédones herbacées latifoliés terrrestres" "Autres monocotylédones herbacées latifoliés terrrestres" NA "phase 1" "Martine Lapointe et Julie Boudreau" NA NA NA 2026-11-11

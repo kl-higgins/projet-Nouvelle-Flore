@@ -118,8 +118,12 @@ attribution_sel_temp[groupe_taxo%in%c('Hydrophyllum'),`:=`(Interet_Redacteur='S�
 
 attribution_sel_temp[Interet_Redacteur%like%'Séléna',]
 
+attribution_sel_temp[groupe_taxo%in%c('Apocynum'),`:=`(Interet_Redacteur='Étienne Lacroix-Carignan',
+                                                              état='rédaction complétée',
+                                                              Approbation_Comite_Date=as.Date('2026-11-22'),
+                                                              mise_a_jour_date=as.Date('2026-11-22'))]
 
-
+attribution_sel_temp[Interet_Redacteur%like%'Lacroix',]
 
 # ==============================================================================
 # 4. Regroupement de genres pour les clés ####
@@ -145,6 +149,10 @@ write.table(attribution_sel_temp%>%
                      Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`),
             paste0("output data/attribution_regroupements_check_", Sys.Date(), ".txt"))
 
+write.table(attribution_sel_temp%>%
+              select(groupe_taxo, groupe_principal, sous_groupe, regroupement_cle, Priorisation,
+                     Proposition_Responsable, Interet_Redacteur, Approbation_Comite_Date, `état`, `mise_a_jour_date`),
+            paste0("output data/attribution_regroupements_", Sys.Date(), ".txt"))
 
 # ==============================================================================
 # 4. Exportation en format convivial pour le publique ####
@@ -197,10 +205,10 @@ redacteur_family = 'Fabaceae'
 
 taxons_prj[family==redacteur_family&territoire!='omettre',]%>%
   select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
-         scientificName,scientificNameSimple, `Statut provincial`)
+         scientificName,scientificNameSimple)
 
 taxons_prj[genus==redacteur_genus&territoire!='omettre',]%>%
   select(taxonID, dist, source, territoire, Priorisation, regroupement_cle, family, genus,
-         scientificName,scientificNameSimple, `Statut provincial`)
+         scientificName,scientificNameSimple)
 
 

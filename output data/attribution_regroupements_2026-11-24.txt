@@ -244,7 +244,7 @@
 "243" "Sarracenia" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
 "244" "Chamaebuxus" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
 "245" "Senega" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA "Patrick Gravel" 2026-11-22 "approbation - phase 2" 2026-11-22
-"246" "Apocynum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
+"246" "Apocynum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA "Étienne Lacroix-Carignan" 2026-11-22 "rédaction complétée" 2026-11-22
 "247" "Asclepias" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA NA NA NA NA
 "248" "Vinca" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA "Étienne Lacroix-Carignan" 2026-10-15 "approbation - rédaction dans site FQ" 2026-11-09
 "249" "Vincetoxicum" "Dicotylédones terrestres" "Autres dicotylédones herbacées terrestres" NA NA NA "Villeneuve, Thomas" 2026-11-05 "approbation - étape 2" 2026-11-05
